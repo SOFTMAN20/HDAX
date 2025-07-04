@@ -49,35 +49,35 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8 ml-8">
               <a 
                 href="#home" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
               >
                 {t('home')}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#services" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
               >
                 {t('services')}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#products" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
               >
                 {t('products')}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#about" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
               >
                 {t('about')}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#contact" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
               >
                 {t('contact')}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
