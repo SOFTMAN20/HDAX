@@ -108,12 +108,12 @@ All colors MUST be HSL.
 /* Typewriter Text Animation */
 .typewriter-text-container {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 800px;
-  height: 100px;
+  width: 95%;
+  max-width: 900px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,19 +123,20 @@ All colors MUST be HSL.
 
 .typewriter-text-item {
   position: absolute;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(0.9rem, 4vw, 2.5rem);
   font-weight: 900;
   text-align: center;
   color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.95);
   white-space: nowrap;
   opacity: 0;
   overflow: hidden;
   border-right: 3px solid #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   width: 0;
   animation: typewriterCycle 20s infinite;
+  line-height: 1.2;
 }
 
 .typewriter-text-item:nth-child(1) { animation-delay: 0s; }
@@ -182,29 +183,46 @@ All colors MUST be HSL.
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .typewriter-text-container {
-    top: 8%;
-    height: 80px;
-    width: 95%;
+    top: 12%;
+    height: 100px;
+    width: 98%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(0.8rem, 3.5vw, 1.5rem);
+    font-size: clamp(0.75rem, 4.5vw, 1.8rem);
     letter-spacing: 1px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.95);
+    border-right: 2px solid #ffffff;
   }
 }
 
 @media (max-width: 480px) {
   .typewriter-text-container {
-    top: 6%;
-    height: 60px;
+    top: 10%;
+    height: 80px;
     width: 98%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(0.7rem, 4vw, 1.2rem);
+    font-size: clamp(0.65rem, 5vw, 1.4rem);
     letter-spacing: 1px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+    border-right: 2px solid #ffffff;
+  }
+}
+
+@media (max-width: 360px) {
+  .typewriter-text-container {
+    top: 8%;
+    height: 70px;
+    width: 99%;
+  }
+  
+  .typewriter-text-item {
+    font-size: clamp(0.6rem, 5.5vw, 1.2rem);
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.95);
+    border-right: 2px solid #ffffff;
   }
 }
 
