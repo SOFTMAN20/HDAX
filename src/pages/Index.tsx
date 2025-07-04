@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,14 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
   const { t } = useLanguage();
+
+  const rotatingTexts = [
+    "WELCOME TO HDA COMPANY LIMITED",
+    "PROFESSIONAL EXPLOSIVE SOLUTIONS",
+    "SAFETY FIRST, EXCELLENCE ALWAYS",
+    "YOUR TRUSTED BLASTING PARTNER",
+    "PRECISION • POWER • PERFORMANCE"
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
@@ -29,11 +38,11 @@ const Index = () => {
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-yellow-400 transition-colors duration-300">{t('home')}</a>
-              <a href="#services" className="text-yellow-400 transition-colors duration-300">{t('services')}</a>
-              <a href="#products" className="text-yellow-400 transition-colors duration-300">{t('products')}</a>
-              <a href="#about" className="text-yellow-400 transition-colors duration-300">{t('about')}</a>
-              <a href="#contact" className="text-yellow-400 transition-colors duration-300">{t('contact')}</a>
+              <a href="#home" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('home')}</a>
+              <a href="#services" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('services')}</a>
+              <a href="#products" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('products')}</a>
+              <a href="#about" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('about')}</a>
+              <a href="#contact" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('contact')}</a>
               <LanguageSwitcher />
             </div>
           </div>
@@ -45,6 +54,24 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/90 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
         
+        {/* Amazing Rotating Text Display */}
+        <div className="absolute top-0 left-0 w-full h-full z-15 overflow-hidden">
+          <div className="rotating-text-container">
+            {rotatingTexts.map((text, index) => (
+              <div 
+                key={index}
+                className="rotating-text-item"
+                style={{ 
+                  animationDelay: `${index * 4}s`,
+                  animationDuration: `${rotatingTexts.length * 4}s`
+                }}
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -74,7 +101,7 @@ const Index = () => {
           >
             <Button 
               size="lg" 
-              className="bg-yellow-500 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
             >
               {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -82,24 +109,41 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-yellow-400 bg-yellow-400 text-slate-900 px-8 py-4 text-lg transition-all duration-300"
+              className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-8 py-4 text-lg transition-all duration-300"
             >
               {t('getConsultation')}
             </Button>
           </motion.div>
         </div>
 
-        {/* Floating Animation Elements */}
+        {/* Enhanced Floating Animation Elements */}
         <div className="absolute inset-0 z-15">
           <motion.div
-            animate={{ y: [0, -20, 0] }}
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 360],
+              scale: [1, 1.2, 1]
+            }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full opacity-60"
+            className="absolute top-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-60"
           ></motion.div>
           <motion.div
-            animate={{ y: [0, -30, 0] }}
+            animate={{ 
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              rotate: [0, -360]
+            }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-1/3 right-1/3 w-3 h-3 bg-red-400 rounded-full opacity-40"
+            className="absolute top-1/3 right-1/3 w-4 h-4 bg-red-400 rounded-full opacity-40"
+          ></motion.div>
+          <motion.div
+            animate={{ 
+              y: [0, 25, 0],
+              x: [0, -15, 0],
+              scale: [1, 1.5, 1]
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute bottom-1/3 left-1/5 w-2 h-2 bg-yellow-300 rounded-full opacity-70"
           ></motion.div>
         </div>
       </section>
