@@ -108,38 +108,34 @@ All colors MUST be HSL.
 /* Typewriter Text Animation */
 .typewriter-text-container {
   position: absolute;
-  top: 12%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   max-width: 800px;
-  height: 120px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 25;
+  z-index: 20;
   pointer-events: none;
 }
 
 .typewriter-text-item {
   position: absolute;
-  font-size: clamp(1.2rem, 4vw, 2.8rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   font-weight: 900;
   text-align: center;
   color: #ffffff;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
   white-space: nowrap;
   opacity: 0;
   overflow: hidden;
-  border-right: 4px solid #fbbf24;
+  border-right: 3px solid #ffffff;
   letter-spacing: 2px;
   text-transform: uppercase;
   width: 0;
   animation: typewriterCycle 20s infinite;
-  backdrop-filter: blur(2px);
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
-  padding: 8px 16px;
-  border-radius: 8px;
 }
 
 .typewriter-text-item:nth-child(1) { animation-delay: 0s; }
@@ -170,7 +166,7 @@ All colors MUST be HSL.
 /* Blinking cursor animation */
 .typewriter-text-item::after {
   content: '';
-  border-right: 4px solid #fbbf24;
+  border-right: 3px solid #ffffff;
   animation: blink 1s infinite;
 }
 
@@ -186,52 +182,29 @@ All colors MUST be HSL.
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .typewriter-text-container {
-    top: 10%;
-    height: 100px;
+    top: 8%;
+    height: 80px;
     width: 95%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(1rem, 4.5vw, 1.8rem);
+    font-size: clamp(0.8rem, 3.5vw, 1.5rem);
     letter-spacing: 1px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95), 0 0 15px rgba(0, 0, 0, 0.8);
-    border-right: 3px solid #fbbf24;
-    padding: 6px 12px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
   }
 }
 
 @media (max-width: 480px) {
   .typewriter-text-container {
-    top: 8%;
-    height: 80px;
+    top: 6%;
+    height: 60px;
     width: 98%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(0.9rem, 5vw, 1.4rem);
+    font-size: clamp(0.7rem, 4vw, 1.2rem);
     letter-spacing: 1px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.8);
-    border-right: 3px solid #fbbf24;
-    padding: 4px 8px;
-  }
-  
-  .typewriter-text-item::after {
-    border-right: 3px solid #fbbf24;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 360px) {
-  .typewriter-text-container {
-    top: 6%;
-    height: 70px;
-    width: 100%;
-  }
-  
-  .typewriter-text-item {
-    font-size: clamp(0.8rem, 5.5vw, 1.2rem);
-    letter-spacing: 0.5px;
-    padding: 3px 6px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
   }
 }
 

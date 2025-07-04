@@ -150,14 +150,11 @@ const Index = () => {
         </div>
 
         <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 flex flex-col justify-center min-h-screen">
-          {/* Add some spacing to ensure typewriter text is visible */}
-          <div className="h-16 sm:h-20 md:h-24"></div>
-          
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight mt-8 sm:mt-12 md:mt-16"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight"
           >
             {t('heroTitle')}
             <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
