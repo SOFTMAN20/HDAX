@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
+import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -454,7 +454,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-700 py-12">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
@@ -492,6 +492,66 @@ const Index = () => {
                 <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('internationalMarkets')}</li>
                 <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('remoteSiteOperations')}</li>
               </ul>
+            </div>
+            <div>
+              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">Follow Us</h4>
+              <div className="flex space-x-4 mb-4">
+                <motion.a
+                  href="https://facebook.com/hdacompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-slate-700 p-3 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Facebook className="h-5 w-5" />
+                </motion.a>
+                <motion.a
+                  href="https://twitter.com/hdacompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-slate-700 p-3 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Twitter className="h-5 w-5" />
+                </motion.a>
+                <motion.a
+                  href="https://linkedin.com/company/hdacompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-slate-700 p-3 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </motion.a>
+              </div>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="https://instagram.com/hdacompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-slate-700 p-3 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Instagram className="h-5 w-5" />
+                </motion.a>
+                <motion.a
+                  href="https://youtube.com/hdacompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-slate-700 p-3 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Youtube className="h-5 w-5" />
+                </motion.a>
+              </div>
+              <p className="text-gray-400 text-sm mt-4">
+                Stay connected for updates on mining solutions and safety innovations
+              </p>
             </div>
           </div>
           <div className="text-center pt-8 border-t border-slate-700">
