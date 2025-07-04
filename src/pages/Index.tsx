@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,7 @@ const Index = () => {
         {/* Scrolling Welcome Text */}
         <div className="absolute top-20 left-0 w-full z-30 overflow-hidden">
           <div className="scrolling-text whitespace-nowrap text-2xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent opacity-80">
-            WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED •
+            WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • 
           </div>
         </div>
         
