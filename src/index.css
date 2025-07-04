@@ -182,7 +182,7 @@ All colors MUST be HSL.
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .typewriter-text-container {
-    top: 15%;
+    top: 12%;
     height: 100px;
     width: 95%;
   }
@@ -196,7 +196,7 @@ All colors MUST be HSL.
 
 @media (max-width: 480px) {
   .typewriter-text-container {
-    top: 12%;
+    top: 10%;
     height: 80px;
     width: 98%;
   }
