@@ -21,7 +21,7 @@ const Index = () => {
               className="flex items-center space-x-3"
             >
               <img 
-                src="/lovable-uploads/1acd1c31-03d4-4cad-a5cd-2b5b9c4e2c1c.png" 
+                src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
                 alt="HDA Company Limited Logo" 
                 className="h-12 w-12 object-contain"
               />
@@ -87,7 +87,7 @@ const Index = () => {
             >
               {t('getConsultation')}
             </Button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Floating Animation Elements */}
@@ -422,7 +422,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/1acd1c31-03d4-4cad-a5cd-2b5b9c4e2c1c.png" 
+                  src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
                   alt="HDA Company Limited Logo" 
                   className="h-10 w-10 object-contain"
                 />
