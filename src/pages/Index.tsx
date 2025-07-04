@@ -376,13 +376,13 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-slate-700 p-6 rounded-lg border-yellow-400 border transition-all duration-300 shadow-lg shadow-yellow-400/10 group"
+                className="bg-slate-700 p-6 rounded-lg border-yellow-400/30 border-2 hover:border-yellow-400 hover:border-4 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group"
               >
                 <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-yellow-100 mb-2 transition-colors duration-300">{product.name}</h3>
