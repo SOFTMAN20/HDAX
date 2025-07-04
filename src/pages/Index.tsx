@@ -154,7 +154,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight mt-16 sm:mt-20"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight mt-8 sm:mt-16 md:mt-20"
           >
             {t('heroTitle')}
             <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
@@ -164,7 +164,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed px-2"
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed px-2"
           >
             {t('heroDescription')}
             <span className="block text-sm sm:text-base mt-2">{t('heroTagline')}</span>
@@ -174,11 +174,11 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 pb-8"
           >
             <Button 
               size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group transition-all duration-300 w-full sm:w-auto"
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-6 sm:px-8 py-4 text-base sm:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[48px]"
             >
               {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -186,7 +186,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300 w-full sm:w-auto"
+              className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-6 sm:px-8 py-4 text-base sm:text-lg transition-all duration-300 w-full sm:w-auto min-h-[48px] border-2"
             >
               {t('getConsultation')}
             </Button>
