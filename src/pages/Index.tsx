@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,11 +30,11 @@ const Index = () => {
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-yellow-400 transition-colors duration-300">{t('home')}</a>
-              <a href="#services" className="text-yellow-400 transition-colors duration-300">{t('services')}</a>
-              <a href="#products" className="text-yellow-400 transition-colors duration-300">{t('products')}</a>
-              <a href="#about" className="text-yellow-400 transition-colors duration-300">{t('about')}</a>
-              <a href="#contact" className="text-yellow-400 transition-colors duration-300">{t('contact')}</a>
+              <a href="#home" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('home')}</a>
+              <a href="#services" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('services')}</a>
+              <a href="#products" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('products')}</a>
+              <a href="#about" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('about')}</a>
+              <a href="#contact" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('contact')}</a>
               <LanguageSwitcher />
             </div>
           </div>
@@ -44,6 +45,13 @@ const Index = () => {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/90 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
+        
+        {/* Scrolling Welcome Text */}
+        <div className="absolute top-20 left-0 w-full z-30 overflow-hidden">
+          <div className="scrolling-text whitespace-nowrap text-2xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent opacity-80">
+            WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • WELCOME TO HDA COMPANY LIMITED • 
+          </div>
+        </div>
         
         <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
           <motion.h1
@@ -74,7 +82,7 @@ const Index = () => {
           >
             <Button 
               size="lg" 
-              className="bg-yellow-500 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
             >
               {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -82,7 +90,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-yellow-400 bg-yellow-400 text-slate-900 px-8 py-4 text-lg transition-all duration-300"
+              className="border-yellow-400 bg-yellow-400 hover:bg-yellow-500 text-slate-900 px-8 py-4 text-lg transition-all duration-300"
             >
               {t('getConsultation')}
             </Button>
