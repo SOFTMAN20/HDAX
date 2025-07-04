@@ -17,9 +17,16 @@ const Index = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold text-yellow-400"
+              className="flex items-center space-x-3"
             >
-              HDA COMPANY LIMITED
+              <img 
+                src="/lovable-uploads/c1558e6f-4b88-4669-b0a8-37e1a8c32f6a.png" 
+                alt="HDA Company Limited Logo" 
+                className="h-10 w-10 object-contain"
+              />
+              <div className="text-2xl font-bold text-yellow-400">
+                HDA COMPANY LIMITED
+              </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('home')}</a>
