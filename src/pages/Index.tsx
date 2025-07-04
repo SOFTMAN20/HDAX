@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,9 +21,9 @@ const Index = () => {
               className="flex items-center space-x-3"
             >
               <img 
-                src="/lovable-uploads/c1558e6f-4b88-4669-b0a8-37e1a8c32f6a.png" 
+                src="/lovable-uploads/85c7a9fe-3e43-4f4c-9e4a-b0e5f8c8d2a1.png" 
                 alt="HDA Company Limited Logo" 
-                className="h-10 w-10 object-contain"
+                className="h-12 w-12 object-contain"
               />
               <div className="text-2xl font-bold text-yellow-400">
                 HDA COMPANY LIMITED
