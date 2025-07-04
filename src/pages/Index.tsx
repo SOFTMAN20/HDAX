@@ -53,16 +53,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
         
-        {/* Amazing Rotating Text Display - Enhanced and More Visible */}
-        <div className="rotating-text-container">
+        {/* Typewriter Text Display */}
+        <div className="typewriter-text-container">
           {rotatingTexts.map((text, index) => (
             <div 
               key={index}
-              className="rotating-text-item"
-              style={{
-                textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.6)',
-                WebkitTextStroke: '1px rgba(251, 191, 36, 0.5)'
-              }}
+              className="typewriter-text-item"
             >
               {text}
             </div>

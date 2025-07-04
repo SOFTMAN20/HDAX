@@ -105,8 +105,8 @@ All colors MUST be HSL.
   }
 }
 
-/* Amazing Rotating Text Animation - Fixed and Enhanced */
-.rotating-text-container {
+/* Typewriter Text Animation */
+.typewriter-text-container {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -121,106 +121,85 @@ All colors MUST be HSL.
   pointer-events: none;
 }
 
-.rotating-text-item {
+.typewriter-text-item {
   position: absolute;
   font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(45deg, #fbbf24, #ffffff, #fbbf24, #ffffff);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #fbbf24;
-  text-shadow: 
-    0 0 20px rgba(251, 191, 36, 0.8),
-    0 0 40px rgba(251, 191, 36, 0.6),
-    0 0 60px rgba(251, 191, 36, 0.4);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(30px) rotateX(45deg) scale(0.9);
-  animation: rotateTextCycle 20s infinite ease-in-out;
+  overflow: hidden;
+  border-right: 3px solid #ffffff;
   letter-spacing: 2px;
   text-transform: uppercase;
-  filter: 
-    drop-shadow(0 0 10px rgba(251, 191, 36, 0.8))
-    drop-shadow(0 0 20px rgba(251, 191, 36, 0.6))
-    drop-shadow(0 0 30px rgba(251, 191, 36, 0.4));
-  /* Fallback for browsers that don't support background-clip */
-  background-color: #fbbf24;
-  -webkit-text-stroke: 1px rgba(251, 191, 36, 0.3);
+  width: 0;
+  animation: typewriterCycle 20s infinite;
 }
 
-.rotating-text-item:nth-child(1) { animation-delay: 0s; }
-.rotating-text-item:nth-child(2) { animation-delay: 4s; }
-.rotating-text-item:nth-child(3) { animation-delay: 8s; }
-.rotating-text-item:nth-child(4) { animation-delay: 12s; }
-.rotating-text-item:nth-child(5) { animation-delay: 16s; }
+.typewriter-text-item:nth-child(1) { animation-delay: 0s; }
+.typewriter-text-item:nth-child(2) { animation-delay: 4s; }
+.typewriter-text-item:nth-child(3) { animation-delay: 8s; }
+.typewriter-text-item:nth-child(4) { animation-delay: 12s; }
+.typewriter-text-item:nth-child(5) { animation-delay: 16s; }
 
-@keyframes rotateTextCycle {
-  0%, 15% {
+@keyframes typewriterCycle {
+  0%, 5% {
     opacity: 0;
-    transform: translateY(30px) rotateX(45deg) scale(0.9);
-    background-position: 0% 50%;
+    width: 0;
   }
-  20%, 75% {
+  10% {
     opacity: 1;
-    transform: translateY(0) rotateX(0deg) scale(1);
-    background-position: 100% 50%;
+    width: 0;
   }
-  80%, 100% {
+  15%, 17% {
+    opacity: 1;
+    width: 100%;
+  }
+  20%, 100% {
     opacity: 0;
-    transform: translateY(-30px) rotateX(-45deg) scale(0.9);
-    background-position: 200% 50%;
+    width: 100%;
   }
 }
 
-/* Enhanced glow effect - simplified */
-.rotating-text-item::before {
+/* Blinking cursor animation */
+.typewriter-text-item::after {
   content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, transparent 70%);
-  border-radius: 10px;
-  z-index: -1;
-  animation: pulseGlow 2s ease-in-out infinite;
+  border-right: 3px solid #ffffff;
+  animation: blink 1s infinite;
 }
 
-@keyframes pulseGlow {
+@keyframes blink {
   0%, 100% {
-    opacity: 0.3;
-    transform: scale(0.95);
+    opacity: 1;
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.05);
+    opacity: 0;
   }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .rotating-text-container {
+  .typewriter-text-container {
     top: 12%;
     height: 120px;
     width: 95%;
   }
   
-  .rotating-text-item {
+  .typewriter-text-item {
     font-size: clamp(1.1rem, 3vw, 2rem);
     letter-spacing: 1px;
   }
 }
 
 @media (max-width: 480px) {
-  .rotating-text-container {
+  .typewriter-text-container {
     top: 10%;
     height: 100px;
   }
   
-  .rotating-text-item {
+  .typewriter-text-item {
     font-size: clamp(0.9rem, 2.5vw, 1.6rem);
     letter-spacing: 1px;
   }
