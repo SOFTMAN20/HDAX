@@ -323,7 +323,8 @@ const Index = () => {
                 <MapPin className="h-6 w-6 text-yellow-400 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Head Office</h3>
-                  <p className="text-gray-300">Tanzania, East Africa</p>
+                  <p className="text-gray-300">Jasma Cash and Carry</p>
+                  <p className="text-gray-300">Mbeya 1113, Tanzania</p>
                   <p className="text-gray-400 text-sm mt-1">Serving mining operations across Tanzania and internationally</p>
                 </div>
               </div>
@@ -332,7 +333,7 @@ const Index = () => {
                 <Phone className="h-6 w-6 text-yellow-400 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                  <p className="text-gray-300">+255 XXX XXX XXX</p>
+                  <p className="text-gray-300">+255 753 392 262</p>
                   <p className="text-gray-400 text-sm mt-1">24/7 Emergency Support & Consultation</p>
                 </div>
               </div>
@@ -411,6 +412,11 @@ const Index = () => {
               <p className="text-gray-400 mb-4">
                 Tanzania's Premier Explosive & Mining Company specializing in explosive products, blasting services, and consultancy.
               </p>
+              <div className="text-gray-500 text-sm">
+                <p>Jasma Cash and Carry</p>
+                <p>Mbeya 1113, Tanzania</p>
+                <p>Phone: +255 753 392 262</p>
+              </div>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Our Services</h4>
