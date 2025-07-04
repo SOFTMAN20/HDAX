@@ -40,9 +40,9 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
                 alt="HDA Company Limited Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
               />
-              <div className="text-2xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
+              <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
                 HDA COMPANY LIMITED
               </div>
             </motion.div>
@@ -56,8 +56,7 @@ const Index = () => {
             </div>
             
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-4">
-              <LanguageSwitcher />
+            <div className="md:hidden">
               <Button
                 variant="ghost"
                 size="icon"
@@ -80,6 +79,9 @@ const Index = () => {
             className="md:hidden overflow-hidden bg-slate-800 border-t border-slate-700"
           >
             <div className="px-6 py-4 space-y-4">
+              <div className="border-b border-slate-600 pb-4">
+                <LanguageSwitcher />
+              </div>
               <a 
                 href="#home" 
                 onClick={closeMobileMenu}
