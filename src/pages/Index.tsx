@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ const Index = () => {
 
   const rotatingTexts = [
     "WELCOME TO HDA COMPANY LIMITED",
-    "PROFESSIONAL EXPLOSIVE SOLUTIONS",
+    "PROFESSIONAL EXPLOSIVE SOLUTIONS", 
     "SAFETY FIRST, EXCELLENCE ALWAYS",
     "YOUR TRUSTED BLASTING PARTNER",
     "PRECISION • POWER • PERFORMANCE"
@@ -54,30 +53,25 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/90 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
         
-        {/* Amazing Rotating Text Display */}
-        <div className="absolute top-0 left-0 w-full h-full z-15 overflow-hidden">
-          <div className="rotating-text-container">
-            {rotatingTexts.map((text, index) => (
-              <div 
-                key={index}
-                className="rotating-text-item"
-                style={{ 
-                  animationDelay: `${index * 4}s`,
-                  animationDuration: `${rotatingTexts.length * 4}s`
-                }}
-              >
-                {text}
-              </div>
-            ))}
-          </div>
+        {/* Amazing Rotating Text Display - Enhanced */}
+        <div className="rotating-text-container">
+          {rotatingTexts.map((text, index) => (
+            <div 
+              key={index}
+              className="rotating-text-item"
+              data-text={text}
+            >
+              {text}
+            </div>
+          ))}
         </div>
 
-        <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
+        <div className="relative z-20 text-center max-w-4xl mx-auto px-6 mt-32">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
           >
             {t('heroTitle')}
             <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
@@ -87,10 +81,10 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
           >
             {t('heroDescription')}
-            <span className="block text-lg mt-2">{t('heroTagline')}</span>
+            <span className="block text-base mt-2">{t('heroTagline')}</span>
           </motion.p>
           
           <motion.div

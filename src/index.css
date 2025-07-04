@@ -105,105 +105,118 @@ All colors MUST be HSL.
   }
 }
 
-/* Amazing Rotating Text Animation */
+/* Amazing Rotating Text Animation - Fixed and Enhanced */
 .rotating-text-container {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  max-width: 800px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;
+  z-index: 30;
+  pointer-events: none;
 }
 
 .rotating-text-item {
   position: absolute;
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(45deg, #fbbf24, #ef4444, #fbbf24);
-  background-size: 200% 200%;
+  background: linear-gradient(45deg, #fbbf24, #ef4444, #8b5cf6, #fbbf24);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+  color: transparent;
+  text-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(50px) rotateX(90deg) scale(0.8);
-  animation: rotateText infinite ease-in-out;
-  letter-spacing: 2px;
+  transform: translateY(30px) rotateX(45deg) scale(0.9);
+  animation: rotateTextCycle 20s infinite ease-in-out;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
 }
 
-@keyframes rotateText {
+.rotating-text-item:nth-child(1) { animation-delay: 0s; }
+.rotating-text-item:nth-child(2) { animation-delay: 4s; }
+.rotating-text-item:nth-child(3) { animation-delay: 8s; }
+.rotating-text-item:nth-child(4) { animation-delay: 12s; }
+.rotating-text-item:nth-child(5) { animation-delay: 16s; }
+
+@keyframes rotateTextCycle {
   0%, 15% {
     opacity: 0;
-    transform: translateY(50px) rotateX(90deg) scale(0.8);
+    transform: translateY(30px) rotateX(45deg) scale(0.9);
+    background-position: 0% 50%;
   }
   20%, 80% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg) scale(1);
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
   85%, 100% {
     opacity: 0;
-    transform: translateY(-50px) rotateX(-90deg) scale(0.8);
-    background-position: 100% 50%;
+    transform: translateY(-30px) rotateX(-45deg) scale(0.9);
+    background-position: 200% 50%;
   }
 }
 
-/* Enhanced Animation for Background Gradient */
-.rotating-text-item {
-  animation: rotateText infinite ease-in-out, gradientShift 3s ease-in-out infinite;
+/* Enhanced glow effect */
+.rotating-text-item::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #fbbf24, #ef4444, #8b5cf6);
+  opacity: 0.2;
+  filter: blur(15px);
+  z-index: -1;
+  animation: pulseGlow 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@keyframes gradientShift {
+@keyframes pulseGlow {
   0%, 100% {
-    background-position: 0% 50%;
+    transform: scale(1);
+    opacity: 0.2;
   }
   50% {
-    background-position: 100% 50%;
+    transform: scale(1.05);
+    opacity: 0.4;
   }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .rotating-text-container {
-    top: 10%;
+    top: 15%;
+    height: 100px;
+    width: 95%;
+  }
+  
+  .rotating-text-item {
+    font-size: clamp(0.9rem, 2.5vw, 1.8rem);
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rotating-text-container {
+    top: 12%;
     height: 80px;
   }
   
   .rotating-text-item {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(0.8rem, 2vw, 1.4rem);
     letter-spacing: 1px;
-  }
-}
-
-/* Add glow effect */
-.rotating-text-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #fbbf24, #ef4444);
-  opacity: 0.3;
-  filter: blur(20px);
-  z-index: -1;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.5;
   }
 }
