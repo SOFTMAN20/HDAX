@@ -299,14 +299,46 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "ANFO Explosives", description: "Ammonium Nitrate Fuel Oil for efficient blasting" },
-              { name: "Emulsion Explosives", description: "Water-resistant explosives for wet conditions" },
-              { name: "Detonators", description: "Precision timing devices for controlled blasting" },
-              { name: "Boosters", description: "High-energy initiating charges" },
-              { name: "Safety Equipment", description: "Personal protective equipment for blasting operations" },
-              { name: "Blasting Accessories", description: "Complete range of blasting support equipment" },
-              { name: "Shaped Charges", description: "Specialized charges for precise cutting operations" },
-              { name: "Mining Tools", description: "Professional-grade mining and drilling equipment" }
+              { 
+                name: "ANFO Explosives", 
+                description: "Ammonium Nitrate Fuel Oil for efficient blasting",
+                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Emulsion Explosives", 
+                description: "Water-resistant explosives for wet conditions",
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Detonators", 
+                description: "Precision timing devices for controlled blasting",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Boosters", 
+                description: "High-energy initiating charges",
+                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Safety Equipment", 
+                description: "Personal protective equipment for blasting operations",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Blasting Accessories", 
+                description: "Complete range of blasting support equipment",
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Shaped Charges", 
+                description: "Specialized charges for precise cutting operations",
+                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+              },
+              { 
+                name: "Mining Tools", 
+                description: "Professional-grade mining and drilling equipment",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
+              }
             ].map((product, index) => (
               <motion.div
                 key={index}
@@ -316,8 +348,12 @@ const Index = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-slate-700 p-6 rounded-lg border-yellow-400 border transition-all duration-300 shadow-lg shadow-yellow-400/10 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center mb-4 transition-all duration-300">
-                  <Mountain className="h-6 w-6 text-slate-900 transition-colors duration-300" />
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-yellow-100 mb-2 transition-colors duration-300">{product.name}</h3>
                 <p className="text-gray-300 text-sm transition-colors duration-300">{product.description}</p>
