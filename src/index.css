@@ -207,3 +207,25 @@ All colors MUST be HSL.
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
   }
 }
+
+/* Phone calling animation */
+@keyframes phoneRing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(-10deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(10deg);
+  }
+}
+
+.phone-calling {
+  animation: phoneRing 2s infinite;
+}
+
+/* Enhanced phone icon animation */
+.phone-icon:hover {
+  animation: phoneRing 1s infinite;
+}

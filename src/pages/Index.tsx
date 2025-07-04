@@ -47,6 +47,16 @@ const Index = () => {
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8 ml-8">
+              {/* Phone number with calling animation */}
+              <div className="flex items-center space-x-2 text-yellow-400">
+                <Phone className="h-4 w-4 phone-icon transition-all duration-300" />
+                <a 
+                  href="tel:+255753392262" 
+                  className="text-sm hover:text-yellow-300 transition-colors duration-300"
+                >
+                  +255 753 392 262
+                </a>
+              </div>
               <a href="#home" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('home')}</a>
               <a href="#services" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('services')}</a>
               <a href="#products" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('products')}</a>
