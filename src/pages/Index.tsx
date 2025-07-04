@@ -21,20 +21,20 @@ const Index = () => {
               className="flex items-center space-x-3"
             >
               <img 
-                src="/lovable-uploads/85c7a9fe-3e43-4f4c-9e4a-b0e5f8c8d2a1.png" 
+                src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
                 alt="HDA Company Limited Logo" 
                 className="h-12 w-12 object-contain"
               />
-              <div className="text-2xl font-bold text-yellow-400">
+              <div className="text-2xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
                 HDA COMPANY LIMITED
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('home')}</a>
-              <a href="#services" className="text-white hover:text-yellow-400 transition-colors">{t('services')}</a>
-              <a href="#products" className="text-white hover:text-yellow-400 transition-colors">{t('products')}</a>
-              <a href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('about')}</a>
-              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors">{t('contact')}</a>
+              <a href="#home" className="text-white hover:text-red-400 transition-colors">{t('home')}</a>
+              <a href="#services" className="text-white hover:text-red-400 transition-colors">{t('services')}</a>
+              <a href="#products" className="text-white hover:text-red-400 transition-colors">{t('products')}</a>
+              <a href="#about" className="text-white hover:text-red-400 transition-colors">{t('about')}</a>
+              <a href="#contact" className="text-white hover:text-red-400 transition-colors">{t('contact')}</a>
               <LanguageSwitcher />
             </div>
           </div>
@@ -54,7 +54,7 @@ const Index = () => {
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
             {t('heroTitle')}
-            <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
+            <span className="text-red-400 block">{t('heroSubtitle')}</span>
           </motion.h1>
           
           <motion.p
@@ -75,7 +75,7 @@ const Index = () => {
           >
             <Button 
               size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg group"
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-4 text-lg group"
             >
               {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -83,7 +83,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg"
+              className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-4 text-lg"
             >
               {t('getConsultation')}
             </Button>
@@ -95,12 +95,12 @@ const Index = () => {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full opacity-60"
+            className="absolute top-1/4 left-1/4 w-2 h-2 bg-red-400 rounded-full opacity-60"
           ></motion.div>
           <motion.div
             animate={{ y: [0, -30, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-400 rounded-full opacity-40"
+            className="absolute top-1/3 right-1/3 w-3 h-3 bg-red-400 rounded-full opacity-40"
           ></motion.div>
         </div>
       </section>
@@ -149,17 +149,17 @@ const Index = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Card className="bg-slate-700 border-slate-600 h-full hover:bg-slate-600 transition-all duration-300">
+                <Card className="bg-slate-700 border-slate-600 h-full hover:bg-slate-600 transition-all duration-300 hover:border-red-500">
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <service.icon className="h-12 w-12 text-yellow-400 mb-4" />
+                      <service.icon className="h-12 w-12 text-red-400 mb-4" />
                       <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                       <p className="text-gray-300 mb-6">{service.description}</p>
                     </div>
                     <ul className="space-y-2">
                       {service.features.map((feature, i) => (
                         <li key={i} className="text-gray-400 flex items-center">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                          <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                           {feature}
                         </li>
                       ))}
@@ -204,10 +204,10 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-slate-700 p-6 rounded-lg border border-slate-600 hover:border-yellow-400 transition-all duration-300"
+                className="bg-slate-700 p-6 rounded-lg border border-slate-600 hover:border-red-400 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                  <Mountain className="h-6 w-6 text-slate-900" />
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                  <Mountain className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{product.name}</h3>
                 <p className="text-gray-400 text-sm">{product.description}</p>
@@ -218,7 +218,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-500 to-yellow-600">
+      <section className="py-20 bg-gradient-to-r from-red-500 to-red-600">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
@@ -232,7 +232,7 @@ const Index = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-slate-900"
+                className="text-white"
               >
                 <stat.icon className="h-12 w-12 mx-auto mb-4" />
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
@@ -268,7 +268,7 @@ const Index = () => {
                   "Full range of mining explosive accessories"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></div>
+                    <div className="w-2 h-2 bg-red-400 rounded-full mr-4"></div>
                     {item}
                   </div>
                 ))}
@@ -281,8 +281,8 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-8">
-                <div className="text-slate-900">
+              <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-lg p-8">
+                <div className="text-white">
                   <h3 className="text-2xl font-bold mb-6">{t('whyChoose')}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center text-center">
@@ -332,7 +332,7 @@ const Index = () => {
               className="space-y-8"
             >
               <div className="flex items-start space-x-4">
-                <MapPin className="h-6 w-6 text-yellow-400 mt-1" />
+                <MapPin className="h-6 w-6 text-red-400 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{t('headOffice')}</h3>
                   <p className="text-gray-300">Jasma Cash and Carry</p>
@@ -342,7 +342,7 @@ const Index = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <Phone className="h-6 w-6 text-yellow-400 mt-1" />
+                <Phone className="h-6 w-6 text-red-400 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{t('phone')}</h3>
                   <p className="text-gray-300">+255 753 392 262</p>
@@ -351,7 +351,7 @@ const Index = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <Mail className="h-6 w-6 text-yellow-400 mt-1" />
+                <Mail className="h-6 w-6 text-red-400 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{t('email')}</h3>
                   <p className="text-gray-300">info@hdacompany.co.tz</p>
@@ -373,23 +373,23 @@ const Index = () => {
                       <input
                         type="text"
                         placeholder={t('yourName')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
+                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-400"
                       />
                       <input
                         type="text"
                         placeholder={t('company')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
+                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-400"
                       />
                     </div>
                     <div>
                       <input
                         type="email"
                         placeholder={t('emailAddress')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
+                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-400"
                       />
                     </div>
                     <div>
-                      <select className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:border-yellow-400">
+                      <select className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:border-red-400">
                         <option value="">{t('selectService')}</option>
                         <option value="explosives">{t('explosiveProducts')}</option>
                         <option value="blasting">{t('blastingServices')}</option>
@@ -401,10 +401,10 @@ const Index = () => {
                       <textarea
                         placeholder={t('projectDetails')}
                         rows={4}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 resize-none"
+                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-400 resize-none"
                       ></textarea>
                     </div>
-                    <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3">
+                    <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3">
                       {t('sendInquiry')}
                     </Button>
                   </form>
@@ -420,7 +420,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold text-yellow-400 mb-4">HDA COMPANY LIMITED</div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
+                  alt="HDA Company Limited Logo" 
+                  className="h-10 w-10 object-contain"
+                />
+                <div className="text-xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
+                  HDA COMPANY LIMITED
+                </div>
+              </div>
               <p className="text-gray-400 mb-4">
                 {t('footerDescription')}
               </p>
