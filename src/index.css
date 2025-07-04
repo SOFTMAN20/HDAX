@@ -126,16 +126,16 @@ All colors MUST be HSL.
   font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(45deg, #ffffff, #fbbf24, #ffffff, #f3f4f6);
+  background: linear-gradient(45deg, #fbbf24, #ffffff, #fbbf24, #ffffff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #ffffff;
+  color: #fbbf24;
   text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.9),
-    0 0 20px rgba(251, 191, 36, 0.7),
-    0 0 30px rgba(251, 191, 36, 0.5);
+    0 0 20px rgba(251, 191, 36, 0.8),
+    0 0 40px rgba(251, 191, 36, 0.6),
+    0 0 60px rgba(251, 191, 36, 0.4);
   white-space: nowrap;
   opacity: 0;
   transform: translateY(30px) rotateX(45deg) scale(0.9);
@@ -143,12 +143,12 @@ All colors MUST be HSL.
   letter-spacing: 2px;
   text-transform: uppercase;
   filter: 
-    drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))
-    drop-shadow(0 0 15px rgba(251, 191, 36, 0.6))
-    drop-shadow(0 0 25px rgba(251, 191, 36, 0.4));
+    drop-shadow(0 0 10px rgba(251, 191, 36, 0.8))
+    drop-shadow(0 0 20px rgba(251, 191, 36, 0.6))
+    drop-shadow(0 0 30px rgba(251, 191, 36, 0.4));
   /* Fallback for browsers that don't support background-clip */
-  background-color: #ffffff;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  background-color: #fbbf24;
+  -webkit-text-stroke: 1px rgba(251, 191, 36, 0.3);
 }
 
 .rotating-text-item:nth-child(1) { animation-delay: 0s; }
@@ -183,7 +183,7 @@ All colors MUST be HSL.
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(251, 191, 36, 0.1) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, transparent 70%);
   border-radius: 10px;
   z-index: -1;
   animation: pulseGlow 2s ease-in-out infinite;
@@ -191,11 +191,11 @@ All colors MUST be HSL.
 
 @keyframes pulseGlow {
   0%, 100% {
-    opacity: 0.2;
+    opacity: 0.3;
     transform: scale(0.95);
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.6;
     transform: scale(1.05);
   }
 }
