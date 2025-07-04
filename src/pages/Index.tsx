@@ -47,11 +47,41 @@ const Index = () => {
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8 ml-8">
-              <a href="#home" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('home')}</a>
-              <a href="#services" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('services')}</a>
-              <a href="#products" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('products')}</a>
-              <a href="#about" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('about')}</a>
-              <a href="#contact" className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300">{t('contact')}</a>
+              <a 
+                href="#home" 
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+              >
+                {t('home')}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#services" 
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+              >
+                {t('services')}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#products" 
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+              >
+                {t('products')}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#about" 
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+              >
+                {t('about')}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#contact" 
+                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group"
+              >
+                {t('contact')}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
               <LanguageSwitcher />
             </div>
             
@@ -85,35 +115,35 @@ const Index = () => {
               <a 
                 href="#home" 
                 onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-colors duration-300 py-2"
+                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
               >
                 {t('home')}
               </a>
               <a 
                 href="#services" 
                 onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-colors duration-300 py-2"
+                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
               >
                 {t('services')}
               </a>
               <a 
                 href="#products" 
                 onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-colors duration-300 py-2"
+                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
               >
                 {t('products')}
               </a>
               <a 
                 href="#about" 
                 onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-colors duration-300 py-2"
+                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
               >
                 {t('about')}
               </a>
               <a 
                 href="#contact" 
                 onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-colors duration-300 py-2"
+                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
               >
                 {t('contact')}
               </a>
