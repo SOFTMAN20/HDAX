@@ -1,10 +1,13 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       {/* Navigation */}
@@ -18,12 +21,13 @@ const Index = () => {
             >
               HDA COMPANY LIMITED
             </motion.div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-400 transition-colors">Home</a>
-              <a href="#services" className="text-white hover:text-yellow-400 transition-colors">Services</a>
-              <a href="#products" className="text-white hover:text-yellow-400 transition-colors">Products</a>
-              <a href="#about" className="text-white hover:text-yellow-400 transition-colors">About</a>
-              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors">Contact</a>
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#home" className="text-white hover:text-yellow-400 transition-colors">{t('home')}</a>
+              <a href="#services" className="text-white hover:text-yellow-400 transition-colors">{t('services')}</a>
+              <a href="#products" className="text-white hover:text-yellow-400 transition-colors">{t('products')}</a>
+              <a href="#about" className="text-white hover:text-yellow-400 transition-colors">{t('about')}</a>
+              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors">{t('contact')}</a>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -41,8 +45,8 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            HDA COMPANY
-            <span className="text-yellow-400 block">LIMITED</span>
+            {t('heroTitle')}
+            <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
           </motion.h1>
           
           <motion.p
@@ -51,8 +55,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
           >
-            Tanzania's Premier Explosive & Mining Company
-            <span className="block text-lg mt-2">Specialized in Mining Explosives, Blasting Services & Consultancy</span>
+            {t('heroDescription')}
+            <span className="block text-lg mt-2">{t('heroTagline')}</span>
           </motion.p>
           
           <motion.div
@@ -65,7 +69,7 @@ const Index = () => {
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg group"
             >
-              Our Services
+              {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -73,7 +77,7 @@ const Index = () => {
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg"
             >
-              Get Consultation
+              {t('getConsultation')}
             </Button>
           </motion.div>
         </div>
@@ -102,9 +106,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Core Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('coreServices')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive explosive and mining solutions across Tanzania and beyond
+              {t('servicesDescription')}
             </p>
           </motion.div>
 
@@ -112,21 +116,21 @@ const Index = () => {
             {[
               {
                 icon: Zap,
-                title: "Mining Explosive Products",
-                description: "Complete range of mining explosives and accessories for Tanzania and international markets",
-                features: ["ANFO & Emulsion Explosives", "Detonators & Boosters", "Safety Equipment", "International Supply"]
+                title: t('explosiveProducts'),
+                description: t('explosiveProductsDesc'),
+                features: [t('anfoExplosives'), t('detonators'), t('safetyEquipment'), t('internationalSupply')]
               },
               {
                 icon: Target,
-                title: "Professional Blasting Services",
-                description: "Expert blasting operations with precision and safety as our top priorities",
-                features: ["Controlled Demolition", "Rock Excavation", "Quarry Operations", "Site Preparation"]
+                title: t('blastingServices'),
+                description: t('blastingServicesDesc'),
+                features: [t('controlledDemolition'), t('rockExcavation'), t('quarryOperations'), t('sitePreparation')]
               },
               {
                 icon: BookOpen,
-                title: "Blasting Consultancy",
-                description: "Expert consultation services for optimal blasting design and implementation",
-                features: ["Blast Design", "Safety Assessments", "Training Programs", "Technical Support"]
+                title: t('blastingConsultancy'),
+                description: t('blastingConsultancyDesc'),
+                features: [t('blastDesign'), t('safetyAssessments'), t('trainingPrograms'), t('technicalSupport')]
               }
             ].map((service, index) => (
               <motion.div
@@ -169,9 +173,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Explosive Products & Accessories</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('productsTitle')}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              High-quality mining explosives and accessories trusted by mining operations across Tanzania and international markets
+              {t('productsDescription')}
             </p>
           </motion.div>
 
@@ -210,10 +214,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: Users, number: "50+", label: "Expert Team Members" },
-              { icon: Award, number: "200+", label: "Successful Projects" },
-              { icon: Clock, number: "15+", label: "Years Experience" },
-              { icon: Shield, number: "100%", label: "Safety Record" }
+              { icon: Users, number: "50+", label: t('expertTeam') },
+              { icon: Award, number: "200+", label: t('successfulProjects') },
+              { icon: Clock, number: "15+", label: t('yearsExperience') },
+              { icon: Shield, number: "100%", label: t('safetyRecord') }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -240,12 +244,12 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">About HDA Company Limited</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('aboutTitle')}</h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                HDA Company Limited is Tanzania's leading explosive and mining company, specializing in the sale of mining explosive products and accessories both within Tanzania and internationally.
+                {t('aboutDescription')}
               </p>
               <p className="text-lg text-gray-400 mb-8">
-                Our comprehensive services include professional blasting operations and expert consultancy, making us the trusted partner for mining operations across East Africa and beyond. We combine decades of expertise with cutting-edge technology and an unwavering commitment to safety.
+                {t('aboutDetails')}
               </p>
               <div className="space-y-4">
                 {[
@@ -271,23 +275,23 @@ const Index = () => {
             >
               <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-8">
                 <div className="text-slate-900">
-                  <h3 className="text-2xl font-bold mb-6">Why Choose HDA Company?</h3>
+                  <h3 className="text-2xl font-bold mb-6">{t('whyChoose')}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center text-center">
                       <Shield className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Uncompromising Safety</span>
+                      <span className="text-sm font-medium">{t('uncompromisingSafety')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Award className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Proven Excellence</span>
+                      <span className="text-sm font-medium">{t('provenExcellence')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Users className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Expert Team</span>
+                      <span className="text-sm font-medium">{t('expertTeam')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Wrench className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Full Service</span>
+                      <span className="text-sm font-medium">{t('fullService')}</span>
                     </div>
                   </div>
                 </div>
@@ -306,9 +310,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('getInTouch')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Ready to discuss your explosive and mining needs? Contact our experts for professional consultation and quotes.
+              {t('contactDescription')}
             </p>
           </motion.div>
 
@@ -322,7 +326,7 @@ const Index = () => {
               <div className="flex items-start space-x-4">
                 <MapPin className="h-6 w-6 text-yellow-400 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Head Office</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('headOffice')}</h3>
                   <p className="text-gray-300">Jasma Cash and Carry</p>
                   <p className="text-gray-300">Mbeya 1113, Tanzania</p>
                   <p className="text-gray-400 text-sm mt-1">Serving mining operations across Tanzania and internationally</p>
@@ -332,18 +336,18 @@ const Index = () => {
               <div className="flex items-start space-x-4">
                 <Phone className="h-6 w-6 text-yellow-400 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('phone')}</h3>
                   <p className="text-gray-300">+255 753 392 262</p>
-                  <p className="text-gray-400 text-sm mt-1">24/7 Emergency Support & Consultation</p>
+                  <p className="text-gray-400 text-sm mt-1">{t('emergencySupport')}</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <Mail className="h-6 w-6 text-yellow-400 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('email')}</h3>
                   <p className="text-gray-300">info@hdacompany.co.tz</p>
-                  <p className="text-gray-400 text-sm mt-1">Product inquiries, services & consultancy</p>
+                  <p className="text-gray-400 text-sm mt-1">{t('emailDescription')}</p>
                 </div>
               </div>
             </motion.div>
@@ -355,45 +359,45 @@ const Index = () => {
             >
               <Card className="bg-slate-700 border-slate-600">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Request Quote or Consultation</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">{t('requestQuote')}</h3>
                   <form className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <input
                         type="text"
-                        placeholder="Your Name"
+                        placeholder={t('yourName')}
                         className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
                       />
                       <input
                         type="text"
-                        placeholder="Company"
+                        placeholder={t('company')}
                         className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
                       />
                     </div>
                     <div>
                       <input
                         type="email"
-                        placeholder="Email Address"
+                        placeholder={t('emailAddress')}
                         className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
                       />
                     </div>
                     <div>
                       <select className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:border-yellow-400">
-                        <option value="">Select Service Type</option>
-                        <option value="explosives">Explosive Products</option>
-                        <option value="blasting">Blasting Services</option>
-                        <option value="consultancy">Blasting Consultancy</option>
+                        <option value="">{t('selectService')}</option>
+                        <option value="explosives">{t('explosiveProducts')}</option>
+                        <option value="blasting">{t('blastingServices')}</option>
+                        <option value="consultancy">{t('blastingConsultancy')}</option>
                         <option value="accessories">Mining Accessories</option>
                       </select>
                     </div>
                     <div>
                       <textarea
-                        placeholder="Project Details or Requirements"
+                        placeholder={t('projectDetails')}
                         rows={4}
                         className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 resize-none"
                       ></textarea>
                     </div>
                     <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3">
-                      Send Inquiry
+                      {t('sendInquiry')}
                     </Button>
                   </form>
                 </CardContent>
@@ -410,7 +414,7 @@ const Index = () => {
             <div>
               <div className="text-2xl font-bold text-yellow-400 mb-4">HDA COMPANY LIMITED</div>
               <p className="text-gray-400 mb-4">
-                Tanzania's Premier Explosive & Mining Company specializing in explosive products, blasting services, and consultancy.
+                {t('footerDescription')}
               </p>
               <div className="text-gray-500 text-sm">
                 <p>Jasma Cash and Carry</p>
@@ -419,27 +423,27 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4">Our Services</h4>
+              <h4 className="text-white font-semibold mb-4">{t('ourServices')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Mining Explosive Products</li>
-                <li>Professional Blasting Services</li>
-                <li>Blasting Consultancy</li>
-                <li>Safety Training Programs</li>
+                <li>{t('explosiveProducts')}</li>
+                <li>{t('blastingServices')}</li>
+                <li>{t('blastingConsultancy')}</li>
+                <li>{t('trainingPrograms')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4">Coverage Area</h4>
+              <h4 className="text-white font-semibold mb-4">{t('coverageArea')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Tanzania (Domestic)</li>
-                <li>East Africa Region</li>
-                <li>International Markets</li>
-                <li>Remote Site Operations</li>
+                <li>{t('domesticTanzania')}</li>
+                <li>{t('eastAfricaRegion')}</li>
+                <li>{t('internationalMarkets')}</li>
+                <li>{t('remoteSiteOperations')}</li>
               </ul>
             </div>
           </div>
           <div className="text-center pt-8 border-t border-slate-700">
             <div className="text-gray-500 text-sm">
-              © 2024 HDA Company Limited. All rights reserved. | Explosive & Mining Company
+              © 2024 HDA Company Limited. {t('allRightsReserved')}
             </div>
           </div>
         </div>
