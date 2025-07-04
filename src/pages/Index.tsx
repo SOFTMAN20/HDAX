@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,11 +29,11 @@ const Index = () => {
               </div>
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-400 transition-colors duration-300">{t('home')}</a>
-              <a href="#services" className="text-white hover:text-yellow-400 transition-colors duration-300">{t('services')}</a>
-              <a href="#products" className="text-white hover:text-yellow-400 transition-colors duration-300">{t('products')}</a>
-              <a href="#about" className="text-white hover:text-yellow-400 transition-colors duration-300">{t('about')}</a>
-              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors duration-300">{t('contact')}</a>
+              <a href="#home" className="text-yellow-400 transition-colors duration-300">{t('home')}</a>
+              <a href="#services" className="text-yellow-400 transition-colors duration-300">{t('services')}</a>
+              <a href="#products" className="text-yellow-400 transition-colors duration-300">{t('products')}</a>
+              <a href="#about" className="text-yellow-400 transition-colors duration-300">{t('about')}</a>
+              <a href="#contact" className="text-yellow-400 transition-colors duration-300">{t('contact')}</a>
               <LanguageSwitcher />
             </div>
           </div>
@@ -75,7 +74,7 @@ const Index = () => {
           >
             <Button 
               size="lg" 
-              className="bg-slate-700 hover:bg-yellow-500 text-white hover:text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
+              className="bg-yellow-500 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300"
             >
               {t('ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -83,7 +82,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 px-8 py-4 text-lg transition-all duration-300"
+              className="border-yellow-400 bg-yellow-400 text-slate-900 px-8 py-4 text-lg transition-all duration-300"
             >
               {t('getConsultation')}
             </Button>
@@ -114,7 +113,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('coreServices')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('coreServices')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {t('servicesDescription')}
             </p>
@@ -149,17 +148,17 @@ const Index = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Card className="bg-slate-700 border-slate-600 h-full hover:bg-slate-600 transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/20">
+                <Card className="bg-slate-600 border-yellow-400 h-full transition-all duration-300 shadow-lg shadow-yellow-400/20">
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <service.icon className="h-12 w-12 text-yellow-400 group-hover:text-yellow-300 mb-4 transition-colors duration-300" />
-                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-100 transition-colors duration-300">{service.title}</h3>
+                      <service.icon className="h-12 w-12 text-yellow-300 mb-4 transition-colors duration-300" />
+                      <h3 className="text-2xl font-bold text-yellow-100 mb-3 transition-colors duration-300">{service.title}</h3>
                       <p className="text-gray-300 mb-6">{service.description}</p>
                     </div>
                     <ul className="space-y-2">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 group-hover:bg-yellow-300 transition-colors duration-300"></div>
+                        <li key={i} className="text-gray-300 flex items-center transition-colors duration-300">
+                          <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3 transition-colors duration-300"></div>
                           {feature}
                         </li>
                       ))}
@@ -181,7 +180,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('productsTitle')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('productsTitle')}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {t('productsDescription')}
             </p>
@@ -204,13 +203,13 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-slate-700 p-6 rounded-lg border border-slate-600 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/10 group"
+                className="bg-slate-700 p-6 rounded-lg border-yellow-400 border transition-all duration-300 shadow-lg shadow-yellow-400/10 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-slate-600 to-slate-500 group-hover:from-yellow-400 group-hover:to-yellow-500 rounded-lg flex items-center justify-center mb-4 transition-all duration-300">
-                  <Mountain className="h-6 w-6 text-white group-hover:text-slate-900 transition-colors duration-300" />
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center mb-4 transition-all duration-300">
+                  <Mountain className="h-6 w-6 text-slate-900 transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">{product.name}</h3>
-                <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">{product.description}</p>
+                <h3 className="text-lg font-semibold text-yellow-100 mb-2 transition-colors duration-300">{product.name}</h3>
+                <p className="text-gray-300 text-sm transition-colors duration-300">{product.description}</p>
               </motion.div>
             ))}
           </div>
@@ -218,7 +217,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-700 to-slate-600 hover:from-yellow-500 hover:to-red-500 transition-all duration-500 group">
+      <section className="py-20 bg-gradient-to-r from-yellow-500 to-red-500 transition-all duration-500 group">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
@@ -232,7 +231,7 @@ const Index = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-white group-hover:text-slate-900 transition-colors duration-500"
+                className="text-slate-900 transition-colors duration-500"
               >
                 <stat.icon className="h-12 w-12 mx-auto mb-4" />
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
@@ -252,7 +251,7 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('aboutTitle')}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">{t('aboutTitle')}</h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
                 {t('aboutDescription')}
               </p>
@@ -267,8 +266,8 @@ const Index = () => {
                   "Advanced safety management and training programs",
                   "Full range of mining explosive accessories"
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center text-gray-300 hover:text-yellow-100 transition-colors duration-300 group">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-4 group-hover:bg-yellow-300 transition-colors duration-300"></div>
+                  <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group">
+                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-4 transition-colors duration-300"></div>
                     {item}
                   </div>
                 ))}
@@ -281,8 +280,8 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-slate-600 to-slate-700 hover:from-yellow-400 hover:to-red-500 rounded-lg p-8 transition-all duration-500 group">
-                <div className="text-white group-hover:text-slate-900 transition-colors duration-500">
+              <div className="bg-gradient-to-br from-yellow-400 to-red-500 rounded-lg p-8 transition-all duration-500 group">
+                <div className="text-slate-900 transition-colors duration-500">
                   <h3 className="text-2xl font-bold mb-6">{t('whyChoose')}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center text-center">
@@ -318,7 +317,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('getInTouch')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('getInTouch')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {t('contactDescription')}
             </p>
@@ -331,29 +330,29 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="flex items-start space-x-4 hover:bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
-                <MapPin className="h-6 w-6 text-yellow-400 mt-1 group-hover:text-yellow-300 transition-colors duration-300" />
+              <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
+                <MapPin className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">{t('headOffice')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('headOffice')}</h3>
                   <p className="text-gray-300">Jasma Cash and Carry</p>
                   <p className="text-gray-300">Mbeya 1113, Tanzania</p>
                   <p className="text-gray-400 text-sm mt-1">Serving mining operations across Tanzania and internationally</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 hover:bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
-                <Phone className="h-6 w-6 text-yellow-400 mt-1 group-hover:text-yellow-300 transition-colors duration-300" />
+              <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
+                <Phone className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">{t('phone')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('phone')}</h3>
                   <p className="text-gray-300">+255 753 392 262</p>
                   <p className="text-gray-400 text-sm mt-1">{t('emergencySupport')}</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 hover:bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
-                <Mail className="h-6 w-6 text-yellow-400 mt-1 group-hover:text-yellow-300 transition-colors duration-300" />
+              <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
+                <Mail className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">{t('email')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('email')}</h3>
                   <p className="text-gray-300">info@hdacompany.co.tz</p>
                   <p className="text-gray-400 text-sm mt-1">{t('emailDescription')}</p>
                 </div>
@@ -365,31 +364,31 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="bg-slate-700 border-slate-600 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/10">
+              <Card className="bg-slate-700 border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">{t('requestQuote')}</h3>
+                  <h3 className="text-2xl font-bold text-yellow-100 mb-6">{t('requestQuote')}</h3>
                   <form className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <input
                         type="text"
                         placeholder={t('yourName')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
                       />
                       <input
                         type="text"
                         placeholder={t('company')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
                       />
                     </div>
                     <div>
                       <input
                         type="email"
                         placeholder={t('emailAddress')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
                       />
                     </div>
                     <div>
-                      <select className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white focus:outline-none focus:border-yellow-400 transition-colors duration-300">
+                      <select className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white focus:outline-none focus:border-yellow-300 transition-colors duration-300">
                         <option value="">{t('selectService')}</option>
                         <option value="explosives">{t('explosiveProducts')}</option>
                         <option value="blasting">{t('blastingServices')}</option>
@@ -401,10 +400,10 @@ const Index = () => {
                       <textarea
                         placeholder={t('projectDetails')}
                         rows={4}
-                        className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 resize-none transition-colors duration-300"
+                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 resize-none transition-colors duration-300"
                       ></textarea>
                     </div>
-                    <Button className="w-full bg-slate-600 hover:bg-yellow-500 text-white hover:text-slate-900 font-semibold py-3 transition-all duration-300">
+                    <Button className="w-full bg-yellow-500 text-slate-900 font-semibold py-3 transition-all duration-300">
                       {t('sendInquiry')}
                     </Button>
                   </form>
@@ -440,21 +439,21 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300">{t('ourServices')}</h4>
+              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('ourServices')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('explosiveProducts')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingServices')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingConsultancy')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('trainingPrograms')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('explosiveProducts')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingServices')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingConsultancy')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('trainingPrograms')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-4 hover:text-yellow-400 transition-colors duration-300">{t('coverageArea')}</h4>
+              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('coverageArea')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('domesticTanzania')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('eastAfricaRegion')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('internationalMarkets')}</li>
-                <li className="hover:text-yellow-300 transition-colors duration-300 cursor-pointer">{t('remoteSiteOperations')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('domesticTanzania')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('eastAfricaRegion')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('internationalMarkets')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('remoteSiteOperations')}</li>
               </ul>
             </div>
           </div>
