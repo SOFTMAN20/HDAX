@@ -7,15 +7,15 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-1">
       <Globe className="h-4 w-4 text-white" />
       <Button
         variant="ghost"
         size="sm"
         onClick={() => setLanguage(language === 'en' ? 'sw' : 'en')}
-        className="text-white hover:text-yellow-400 hover:bg-slate-800 px-2 py-1 text-sm"
+        className="text-white hover:text-yellow-400 hover:bg-slate-800 px-3 py-1 text-sm min-w-[50px]"
       >
-        {language === 'en' ? 'Kiswahili' : 'English'}
+        {language === 'en' ? 'KS' : 'EN'}
       </Button>
     </div>
   );
