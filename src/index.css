@@ -108,26 +108,26 @@ All colors MUST be HSL.
 /* Typewriter Text Animation */
 .typewriter-text-container {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   max-width: 800px;
-  height: 150px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 30;
+  z-index: 20;
   pointer-events: none;
 }
 
 .typewriter-text-item {
   position: absolute;
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.2rem, 3.5vw, 2.8rem);
   font-weight: 900;
   text-align: center;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
   white-space: nowrap;
   opacity: 0;
   overflow: hidden;
@@ -182,25 +182,28 @@ All colors MUST be HSL.
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .typewriter-text-container {
-    top: 12%;
-    height: 120px;
+    top: 15%;
+    height: 100px;
     width: 95%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(1.1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 4vw, 1.8rem);
     letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
   }
 }
 
 @media (max-width: 480px) {
   .typewriter-text-container {
-    top: 10%;
-    height: 100px;
+    top: 12%;
+    height: 80px;
+    width: 98%;
   }
   
   .typewriter-text-item {
-    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+    font-size: clamp(0.8rem, 4.5vw, 1.4rem);
     letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
   }
 }
