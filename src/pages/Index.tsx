@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useState } from "react";
@@ -541,31 +543,31 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="bg-slate-700 border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10">
+              <Card className="bg-slate-700 border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/20">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-yellow-100 mb-6">{t('requestQuote')}</h3>
                   <form className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
-                      <input
+                      <Input
                         type="text"
                         placeholder={t('yourName')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
-                      <input
+                      <Input
                         type="text"
                         placeholder={t('company')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div>
-                      <input
+                      <Input
                         type="email"
                         placeholder={t('emailAddress')}
-                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 transition-colors duration-300"
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div>
-                      <select className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white focus:outline-none focus:border-yellow-300 transition-colors duration-300">
+                      <select className="w-full px-4 py-3 bg-slate-600 border border-yellow-400/50 rounded-lg text-white focus:outline-none focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20">
                         <option value="">{t('selectService')}</option>
                         <option value="explosives">{t('explosiveProducts')}</option>
                         <option value="blasting">{t('blastingServices')}</option>
@@ -574,13 +576,13 @@ const Index = () => {
                       </select>
                     </div>
                     <div>
-                      <textarea
+                      <Textarea
                         placeholder={t('projectDetails')}
                         rows={4}
-                        className="w-full px-4 py-3 bg-slate-600 border border-yellow-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-300 resize-none transition-colors duration-300"
-                      ></textarea>
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 resize-none focus:ring-2 focus:ring-yellow-400/20"
+                      />
                     </div>
-                    <Button className="w-full bg-yellow-500 text-slate-900 font-semibold py-3 transition-all duration-300">
+                    <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold py-3 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
                       {t('sendInquiry')}
                     </Button>
                   </form>
