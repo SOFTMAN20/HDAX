@@ -483,9 +483,11 @@ const Index = () => {
                 <MapPin className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
                   <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('headOffice')}</h3>
-                  <p className="text-gray-300">Jasma Cash and Carry</p>
-                  <p className="text-gray-300">Mbeya 1113, Tanzania</p>
-                  <p className="text-gray-400 text-sm mt-1">Serving mining operations across Tanzania and internationally</p>
+                  <p className="text-gray-300 font-semibold">HDA Company Limited</p>
+                  <p className="text-gray-300">P.O. Box 1113, Mbeya</p>
+                  <p className="text-gray-300">Street: Maendeleo</p>
+                  <p className="text-gray-300">Ward: Iyunga</p>
+                  <p className="text-gray-300">Jasma Cash & Carry building</p>
                 </div>
               </div>
               
@@ -582,8 +584,11 @@ const Index = () => {
                 {t('footerDescription')}
               </p>
               <div className="text-gray-500 text-sm">
-                <p>Jasma Cash and Carry</p>
-                <p>Mbeya 1113, Tanzania</p>
+                <p>HDA Company Limited</p>
+                <p>P.O. Box 1113, Mbeya</p>
+                <p>Street: Maendeleo</p>
+                <p>Ward: Iyunga</p>
+                <p>Jasma Cash & Carry building</p>
                 <p>Phone: +255 753 392 262</p>
               </div>
             </div>

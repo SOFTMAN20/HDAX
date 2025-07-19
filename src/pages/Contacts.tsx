@@ -69,7 +69,7 @@ const Contacts = () => {
                   {
                     icon: MapPin,
                     title: "Physical Address",
-                    info: "Maendeleo Street, Iyunga, Mbeya – Tanzania",
+                    info: "HDA Company Limited\nP.O. Box 1113, Mbeya\nStreet: Maendeleo\nWard: Iyunga\nJasma Cash & Carry building",
                     description: "Visit our headquarters"
                   },
                   {
@@ -91,7 +91,7 @@ const Contacts = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">{contact.title}</h3>
-                      <p className="text-yellow-400 font-semibold mb-1">{contact.info}</p>
+                      <div className="text-yellow-400 font-semibold mb-1 whitespace-pre-line">{contact.info}</div>
                       <p className="text-gray-300 text-sm">{contact.description}</p>
                     </div>
                   </motion.div>
@@ -217,7 +217,8 @@ const Contacts = () => {
               <div className="text-center text-gray-400">
                 <MapPin className="h-16 w-16 mx-auto mb-4" />
                 <p className="text-lg">Interactive Map Coming Soon</p>
-                <p className="text-sm">Maendeleo Street, Iyunga, Mbeya – Tanzania</p>
+                <p className="text-sm">Street: Maendeleo, Ward: Iyunga, Mbeya</p>
+                <p className="text-sm">Jasma Cash & Carry building</p>
               </div>
             </div>
           </motion.div>
