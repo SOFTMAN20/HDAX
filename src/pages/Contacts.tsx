@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -57,7 +56,7 @@ const Contacts = () => {
                   {
                     icon: Phone,
                     title: "Mobile",
-                    info: "0753 392 262",
+                    info: "+255753392262",
                     description: "Available for all your mining explosive needs"
                   },
                   {
