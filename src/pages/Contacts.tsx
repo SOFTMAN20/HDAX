@@ -33,7 +33,7 @@ const Contacts = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Get in touch with our experts for all your explosive solutions needs
+            Get in touch with our experts for all your mining explosive solutions needs
           </motion.p>
         </div>
       </section>
@@ -56,27 +56,27 @@ const Contacts = () => {
                 {[
                   {
                     icon: Phone,
-                    title: "Phone",
-                    info: "+258 713 365 874",
-                    description: "Available 24/7 for emergency services"
+                    title: "Mobile",
+                    info: "+255 753 392 262",
+                    description: "Available for all your mining explosive needs"
                   },
                   {
                     icon: Mail,
                     title: "Email",
-                    info: "info@hdacompany.com",
+                    info: "Imanimwaisunga@hda.co.tz",
                     description: "We'll respond within 24 hours"
                   },
                   {
                     icon: MapPin,
-                    title: "Address",
-                    info: "Maputo, Mozambique",
+                    title: "Physical Address",
+                    info: "Maendeleo Street, Iyunga, Mbeya – Tanzania",
                     description: "Visit our headquarters"
                   },
                   {
-                    icon: Clock,
-                    title: "Business Hours",
-                    info: "Mon - Fri: 8:00 AM - 6:00 PM",
-                    description: "Saturday: 9:00 AM - 2:00 PM"
+                    icon: MapPin,
+                    title: "Postal Address",
+                    info: "P.O. Box 1113, Mbeya",
+                    description: "For correspondence"
                   }
                 ].map((contact, index) => (
                   <motion.div
@@ -86,7 +86,7 @@ const Contacts = () => {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="bg-yellow-500 p-3 rounded-lg">
+                    <div className="bg-yellow-500 p-3 rounded-lg flex-shrink-0">
                       <contact.icon className="h-6 w-6 text-slate-900" />
                     </div>
                     <div>
@@ -97,6 +97,21 @@ const Contacts = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Company Registration Info */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-8 p-6 bg-slate-700 rounded-lg border border-yellow-400/30"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Company Information</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p><span className="text-yellow-400 font-semibold">Certificate Incorporation Number:</span> 143611604</p>
+                  <p><span className="text-yellow-400 font-semibold">Headquarters:</span> Mbeya, Tanzania</p>
+                  <p><span className="text-yellow-400 font-semibold">Ownership:</span> Owned by Tanzanians in the United Republic of Tanzania</p>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Contact Form */}
@@ -139,7 +154,7 @@ const Contacts = () => {
                       <label className="block text-gray-300 mb-2">Phone</label>
                       <Input 
                         className="bg-slate-600 border-slate-500 text-white placeholder-gray-400 focus:border-yellow-400 transition-all duration-300 hover:border-yellow-400/50"
-                        placeholder="+258 XXX XXX XXX"
+                        placeholder="+255 XXX XXX XXX"
                       />
                     </div>
                     
@@ -147,7 +162,7 @@ const Contacts = () => {
                       <label className="block text-gray-300 mb-2">Subject</label>
                       <Input 
                         className="bg-slate-600 border-slate-500 text-white placeholder-gray-400 focus:border-yellow-400 transition-all duration-300 hover:border-yellow-400/50"
-                        placeholder="How can we help you?"
+                        placeholder="Mining explosive inquiry"
                       />
                     </div>
                     
@@ -155,7 +170,7 @@ const Contacts = () => {
                       <label className="block text-gray-300 mb-2">Message</label>
                       <Textarea 
                         className="bg-slate-600 border-slate-500 text-white placeholder-gray-400 focus:border-yellow-400 transition-all duration-300 hover:border-yellow-400/50 min-h-[120px]"
-                        placeholder="Tell us about your project requirements..."
+                        placeholder="Tell us about your mining project requirements..."
                       />
                     </div>
                     
@@ -188,7 +203,7 @@ const Contacts = () => {
               Visit Our Location
             </h2>
             <p className="text-xl text-gray-300">
-              Find us in the heart of Maputo
+              Find us in Mbeya, Tanzania
             </p>
           </motion.div>
 
@@ -202,7 +217,7 @@ const Contacts = () => {
               <div className="text-center text-gray-400">
                 <MapPin className="h-16 w-16 mx-auto mb-4" />
                 <p className="text-lg">Interactive Map Coming Soon</p>
-                <p className="text-sm">Maputo, Mozambique</p>
+                <p className="text-sm">Maendeleo Street, Iyunga, Mbeya – Tanzania</p>
               </div>
             </div>
           </motion.div>

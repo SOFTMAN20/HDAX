@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { Shield, Users, Award, Clock, Target } from "lucide-react";
+import { Shield, Users, Award, Clock, Target, Eye, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -20,7 +21,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            About <span className="text-yellow-400">HDA Company</span>
+            About <span className="text-yellow-400">HDA Company Limited</span>
           </motion.h1>
           
           <motion.p
@@ -29,7 +30,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Leading provider of explosive solutions and blasting services with over two decades of experience
+            Leading provider of mining explosive products in Tanzania and East Africa
           </motion.p>
         </div>
       </section>
@@ -44,20 +45,20 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">
-                Our Story
+                About Us
               </h2>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                HDA Company Limited has been at the forefront of the explosive industry for over 20 years, 
-                providing safe, reliable, and efficient blasting solutions across various sectors including 
-                mining, construction, and infrastructure development.
+                HDA Company Limited is a limited company with Certificate Incorporation Number 143611604, 
+                P.O. BOX 1113, Mbeya. The Headquarter is located in Mbeya, Tanzania, and the company is 
+                owned by Tanzanians in the United Republic of Tanzania.
               </p>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                Founded with a commitment to safety and excellence, we have grown to become one of the most 
-                trusted names in the explosive industry, serving clients across East Africa and beyond.
+                HDA Company Limited deals with the importation and selling of mining explosive products 
+                in Tanzania and also exports mining explosives outside Tanzania.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Our team of certified professionals combines extensive experience with cutting-edge technology 
-                to deliver solutions that meet the highest standards of safety and efficiency.
+                We serve clients across East Africa, providing reliable and safe explosive solutions 
+                for various mining operations, from small-scale to large-scale miners.
               </p>
             </motion.div>
             
@@ -78,8 +79,50 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Mission & Vision */}
       <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Card className="bg-slate-700 border-yellow-400/30 h-full">
+                <CardContent className="p-8">
+                  <Target className="h-12 w-12 text-yellow-400 mb-6" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    To enhance the availability of the best explosive products, suitable to all weather—rainy or dry—and 
+                    provide assorted types of mining explosives suitable for all types of miners, from small-scale to 
+                    large-scale miners in East Africa.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="bg-slate-700 border-yellow-400/30 h-full">
+                <CardContent className="p-8">
+                  <Eye className="h-12 w-12 text-yellow-400 mb-6" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    To be one of the best explosives companies in East Africa by providing competitive and 
+                    environmentally friendly products.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -88,34 +131,39 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Our Values
+              Core Values
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
                 icon: Shield,
-                title: "Safety First",
-                description: "Uncompromising commitment to safety in all operations"
-              },
-              {
-                icon: Award,
-                title: "Excellence",
-                description: "Delivering the highest quality solutions and services"
+                title: "Transparency & Honesty",
+                description: "Building trust through open and honest business practices"
               },
               {
                 icon: Users,
-                title: "Integrity",
-                description: "Building trust through transparency and honest business practices"
+                title: "Reliability",
+                description: "Consistent and dependable service delivery"
+              },
+              {
+                icon: Heart,
+                title: "Affordability",
+                description: "Competitive pricing for all customer segments"
+              },
+              {
+                icon: Award,
+                title: "Innovation",
+                description: "Continuously improving our products and services"
               },
               {
                 icon: Target,
-                title: "Innovation",
-                description: "Continuously improving through technology and innovation"
+                title: "Accountability",
+                description: "Taking responsibility for our actions and results"
               }
             ].map((value, index) => (
               <motion.div
@@ -127,9 +175,9 @@ const About = () => {
               >
                 <Card className="bg-slate-700 border-yellow-400/30 h-full transition-all duration-300 hover:border-yellow-400 group">
                   <CardContent className="p-6 text-center">
-                    <value.icon className="h-12 w-12 text-yellow-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                    <p className="text-gray-300">{value.description}</p>
+                    <value.icon className="h-10 w-10 text-yellow-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
+                    <p className="text-gray-300 text-sm">{value.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -138,8 +186,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Statistics */}
-      <section className="py-20 bg-slate-800">
+      {/* Our Activities */}
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -148,17 +196,17 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Our Achievements
+              Our Activities
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "20+", label: "Years Experience" },
-              { number: "500+", label: "Projects Completed" },
-              { number: "50+", label: "Certified Professionals" },
-              { number: "99.9%", label: "Safety Record" }
-            ].map((stat, index) => (
+              "Providing best blasting services",
+              "Distributing explosives to customers all over Tanzania",
+              "Importing and exporting explosives",
+              "Drilling and blasting services to our customers"
+            ].map((activity, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -166,8 +214,12 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-lg">{stat.label}</div>
+                <Card className="bg-slate-700 border-yellow-400/30 h-full transition-all duration-300 hover:border-yellow-400">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-yellow-400 mb-4">{index + 1}</div>
+                    <p className="text-gray-300">{activity}</p>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>

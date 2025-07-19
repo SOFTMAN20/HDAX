@@ -31,7 +31,7 @@ const Products = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Premium explosive products and safety equipment for industrial applications
+            Premium mining explosive products suitable for all weather conditions
           </motion.p>
         </div>
       </section>
@@ -39,55 +39,64 @@ const Products = () => {
       {/* Main Products */}
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Product Categories
-            </h2>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {[
               {
-                icon: Zap,
-                title: "ANFO Explosives",
-                description: "Ammonium Nitrate/Fuel Oil mixtures for controlled blasting",
+                title: "TRUNKLINE",
+                description: "Shock tube with a millisecond delay detonator",
                 features: [
-                  "High explosive power",
-                  "Cost-effective solution",
-                  "Customizable density",
-                  "Weather resistant",
-                  "Easy handling"
+                  "Water resistant",
+                  "Delay timing: 17ms, 25ms, 42ms, and 67ms"
                 ],
                 image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400"
               },
               {
-                icon: Package,
-                title: "Emulsion Explosives",
-                description: "Water-resistant emulsion explosives for wet conditions",
+                title: "BOOSTERS (VIPER BOOSTERS)",
+                description: "High-strength explosive charge for initiation sequence",
                 features: [
-                  "Water-resistant formula",
-                  "Consistent performance",
-                  "Safe transportation",
-                  "Controlled detonation",
-                  "Environmental compliance"
+                  "Weights: 150g to 400g",
+                  "Cap well and cord tunnel (no distortion)",
+                  "Velocity of detonation: min 8,000 m/s",
+                  "Cast density: min 1.8 g/cm³",
+                  "Water resistant (sensitive even after immersion at 100 PSI)"
                 ],
                 image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400"
               },
               {
-                icon: Shield,
-                title: "Safety Equipment",
-                description: "Complete range of blasting safety equipment and accessories",
+                title: "LONG PERIOD DELAY DETONATORS (LP Assemblies)",
+                description: "Shock tube with high-strength delay detonator",
                 features: [
-                  "Personal protective equipment",
-                  "Detonators & primers",
-                  "Safety fuses",
-                  "Warning systems",
-                  "Storage solutions"
+                  "Shock tube is abrasion-resistant and temperature-resistant",
+                  "20 different delay periods with no overlap",
+                  "Connector: J-hook"
+                ],
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400"
+              },
+              {
+                title: "PGAN (POROUS GRANULAR AMMONIUM NITRATE)",
+                description: "Designed for ANFO, heavy ANFO, and emulsion applications",
+                features: [
+                  "Ammonium nitrate content > 99.5%",
+                  "Bulk density: 0.76 – 0.80 g/cm³",
+                  "Particle size (1mm - 3mm): > 95%"
+                ],
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400"
+              },
+              {
+                title: "DETONATING CORDS (PRIMACORD)",
+                description: "Flexible linear explosives with PETN core for trunklines/downlines",
+                features: [
+                  "For mining, quarrying, construction",
+                  "Velocity of Detonation (VOD): 4,500 m/s – 6,000 m/s"
+                ],
+                image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400"
+              },
+              {
+                title: "INNOPAK WATER IN OIL EMULSION CARTRIDGE EXPLOSIVES",
+                description: "For hard rock mining, quarrying, and construction",
+                features: [
+                  "Packed in tubes from 25mm to 65mm (custom sizes available)",
+                  "VOD: 3,500 – 5,000 m/s (depends on hole and rock characteristics)"
                 ],
                 image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400"
               }
@@ -96,7 +105,7 @@ const Products = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.8, delay: (index % 2) * 0.2 }}
                 whileHover={{ y: -10 }}
                 className="group"
               >
@@ -109,14 +118,61 @@ const Products = () => {
                     />
                   </div>
                   <CardContent className="p-8">
-                    <product.icon className="h-12 w-12 text-yellow-400 mb-6 group-hover:scale-110 transition-transform duration-300" />
                     <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
                     <p className="text-gray-300 mb-6">{product.description}</p>
                     <ul className="space-y-3">
                       {product.features.map((feature, i) => (
-                        <li key={i} className="text-gray-300 flex items-center">
-                          <CheckCircle className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0" />
-                          {feature}
+                        <li key={i} className="text-gray-300 flex items-start">
+                          <CheckCircle className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Additional Products */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "EXPLOGEL V6",
+                description: "Watergel cartridge for general mining in hard rock",
+                features: [
+                  "Size range: 25x270mm to 65x550mm (customizable)",
+                  "~2-month lead time for custom sizes",
+                  "VOD: 3,500 – 5,000 m/s"
+                ]
+              },
+              {
+                title: "SUPERPOWER90",
+                description: "Mid-range energy product for mining and quarrying",
+                features: [
+                  "Size range: 25x270mm to 65x550mm (customizable)",
+                  "~2-month lead time for custom sizes",
+                  "VOD: 3,000 – 4,800 m/s"
+                ]
+              }
+            ].map((product, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+              >
+                <Card className="bg-slate-700 border-yellow-400/30 h-full transition-all duration-300 hover:border-yellow-400">
+                  <CardContent className="p-8">
+                    <Package className="h-12 w-12 text-yellow-400 mb-6" />
+                    <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
+                    <p className="text-gray-300 mb-6">{product.description}</p>
+                    <ul className="space-y-3">
+                      {product.features.map((feature, i) => (
+                        <li key={i} className="text-gray-300 flex items-start">
+                          <CheckCircle className="h-4 w-4 text-yellow-400 mr-3 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -146,8 +202,8 @@ const Products = () => {
             {[
               {
                 icon: Star,
-                title: "Premium Quality",
-                description: "Highest quality standards in manufacturing"
+                title: "Weather Resistant",
+                description: "Suitable for all weather conditions - rainy or dry"
               },
               {
                 icon: Shield,
@@ -156,13 +212,13 @@ const Products = () => {
               },
               {
                 icon: Truck,
-                title: "Reliable Delivery",
-                description: "Secure and timely delivery worldwide"
+                title: "East Africa Coverage",
+                description: "Serving small-scale to large-scale miners"
               },
               {
                 icon: CheckCircle,
-                title: "Proven Performance",
-                description: "Trusted by industry professionals globally"
+                title: "Custom Solutions",
+                description: "Customizable products with reasonable lead times"
               }
             ].map((feature, index) => (
               <motion.div
