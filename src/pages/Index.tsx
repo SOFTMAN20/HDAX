@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -495,7 +494,7 @@ const Index = () => {
                 <Phone className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
                   <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('phone')}</h3>
-                  <p className="text-gray-300">+255 753 392 262</p>
+                  <p className="text-gray-300">0753 392 262</p>
                   <p className="text-gray-400 text-sm mt-1">{t('emergencySupport')}</p>
                 </div>
               </div>
@@ -504,7 +503,7 @@ const Index = () => {
                 <Mail className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
                   <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('email')}</h3>
-                  <p className="text-gray-300">info@hdacompany.co.tz</p>
+                  <p className="text-gray-300">imanimwaisunga@hda.co.tz</p>
                   <p className="text-gray-400 text-sm mt-1">{t('emailDescription')}</p>
                 </div>
               </div>
@@ -589,7 +588,7 @@ const Index = () => {
                 <p>Street: Maendeleo</p>
                 <p>Ward: Iyunga</p>
                 <p>Jasma Cash & Carry building</p>
-                <p>Phone: +255 753 392 262</p>
+                <p>Phone: 0753 392 262</p>
               </div>
             </div>
             <div>

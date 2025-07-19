@@ -57,13 +57,13 @@ const Contacts = () => {
                   {
                     icon: Phone,
                     title: "Mobile",
-                    info: "+255 753 392 262",
+                    info: "0753 392 262",
                     description: "Available for all your mining explosive needs"
                   },
                   {
                     icon: Mail,
                     title: "Email",
-                    info: "Imanimwaisunga@hda.co.tz",
+                    info: "imanimwaisunga@hda.co.tz",
                     description: "We'll respond within 24 hours"
                   },
                   {
