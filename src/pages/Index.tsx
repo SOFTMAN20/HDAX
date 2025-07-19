@@ -1,16 +1,13 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, Menu, X } from "lucide-react";
+import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useState } from "react";
 
 const Index = () => {
   const { t } = useLanguage();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const rotatingTexts = [
     "WELCOME TO HDA COMPANY LIMITED",
@@ -20,139 +17,8 @@ const Index = () => {
     "PRECISION • POWER • PERFORMANCE"
   ];
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md z-50 border-b border-slate-700">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3"
-            >
-              <img 
-                src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
-                alt="HDA Company Limited Logo" 
-                className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
-              />
-              <div className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">
-                HDA COMPANY LIMITED
-              </div>
-            </motion.div>
-            <div className="hidden md:flex items-center space-x-8 ml-8">
-              <a 
-                href="#home" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
-              >
-                {t('home')}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                href="#services" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
-              >
-                {t('services')}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                href="#products" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
-              >
-                {t('products')}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                href="#about" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
-              >
-                {t('about')}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                href="#contact" 
-                className="relative text-yellow-400 hover:text-yellow-300 transition-all duration-300 px-3 py-2 rounded-md hover:bg-yellow-400/10 group text-lg font-medium"
-              >
-                {t('contact')}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <LanguageSwitcher />
-            </div>
-            
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleMobileMenu}
-                className="text-yellow-400 hover:text-yellow-300 hover:bg-slate-800"
-              >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            </div>
-          </div>
-          
-          {/* Mobile menu */}
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ 
-              opacity: isMobileMenuOpen ? 1 : 0, 
-              height: isMobileMenuOpen ? "auto" : 0 
-            }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-slate-800 border-t border-slate-700"
-          >
-            <div className="px-6 py-4 space-y-4">
-              <div className="border-b border-slate-600 pb-4">
-                <LanguageSwitcher />
-              </div>
-              <a 
-                href="#home" 
-                onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
-              >
-                {t('home')}
-              </a>
-              <a 
-                href="#services" 
-                onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
-              >
-                {t('services')}
-              </a>
-              <a 
-                href="#products" 
-                onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
-              >
-                {t('products')}
-              </a>
-              <a 
-                href="#about" 
-                onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
-              >
-                {t('about')}
-              </a>
-              <a 
-                href="#contact" 
-                onClick={closeMobileMenu}
-                className="block text-yellow-400 hover:text-yellow-300 transition-all duration-300 py-3 px-4 rounded-md hover:bg-yellow-400/10 border-l-4 border-transparent hover:border-yellow-400"
-              >
-                {t('contact')}
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
