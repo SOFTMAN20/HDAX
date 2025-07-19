@@ -379,9 +379,11 @@ const Index = () => {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <div className="w-full h-full rounded-full bg-slate-600 flex items-center justify-center">
-                        <div className="text-4xl font-bold text-yellow-300">IM</div>
-                      </div>
+                      <img 
+                        src="/lovable-uploads/fd92fd20-6fda-4b9d-8f1d-8d7d46442142.png" 
+                        alt="Imani Mwaisunga - Executive Director"
+                        className="w-full h-full rounded-full object-cover"
+                      />
                     </div>
                     <h3 className="text-2xl font-bold text-yellow-100 mb-2">Imani Mwaisunga</h3>
                     <p className="text-yellow-300 text-lg mb-4">Executive Director</p>
@@ -419,9 +421,11 @@ const Index = () => {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <div className="w-full h-full rounded-full bg-slate-600 flex items-center justify-center">
-                        <div className="text-4xl font-bold text-yellow-300">JM</div>
-                      </div>
+                      <img 
+                        src="/lovable-uploads/9a793414-de7f-4886-9372-f0a2671146f3.png" 
+                        alt="Jackline Masangula - Director"
+                        className="w-full h-full rounded-full object-cover"
+                      />
                     </div>
                     <h3 className="text-2xl font-bold text-yellow-100 mb-2">Jackline Masangula</h3>
                     <p className="text-yellow-300 text-lg mb-4">Director</p>
