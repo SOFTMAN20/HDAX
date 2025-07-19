@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,10 +24,10 @@ const Navigation = () => {
 
   const navItems = [
     { path: "/", label: t('home') },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
+    { path: "/about", label: "About Us" },
+    { path: "/services", label: "Our Services" },
     { path: "/products", label: "Products" },
-    { path: "/contacts", label: "Contacts" }
+    { path: "/contacts", label: "Contact Us" }
   ];
 
   return (
@@ -57,24 +58,24 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative transition-all duration-300 px-3 py-2 rounded-md text-lg font-medium group ${
+                className={`relative transition-all duration-300 px-3 py-2 rounded-md text-base font-medium group ${
                   isActive(item.path) 
-                    ? "text-yellow-400 bg-yellow-400/10" 
-                    : "text-yellow-400 hover:text-yellow-300 hover:bg-yellow-400/10"
+                    ? "text-white bg-blue-600/20" 
+                    : "text-white hover:text-blue-300 hover:bg-blue-600/10"
                 }`}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
-          {/* Phone & Language */}
+          {/* Desktop Phone & Language */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-yellow-400">
+            <div className="flex items-center space-x-2 text-white bg-blue-600 px-4 py-2 rounded-lg">
               <Phone className="h-4 w-4" />
-              <span className="text-sm">Have any questions?</span>
-              <span className="font-semibold">Call: +258 713 365 874</span>
+              <span className="text-sm font-medium">Have any questions?</span>
+              <span className="font-bold">Call: +255753392262</span>
             </div>
             <LanguageSwitcher />
           </div>
@@ -107,7 +108,7 @@ const Navigation = () => {
               <LanguageSwitcher />
               <div className="flex items-center space-x-2 text-yellow-400 text-sm">
                 <Phone className="h-4 w-4" />
-                <span>+258 713 365 874</span>
+                <span>+255753392262</span>
               </div>
             </div>
             {navItems.map((item) => (
