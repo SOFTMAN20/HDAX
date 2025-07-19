@@ -11,10 +11,10 @@ const Index = () => {
 
   const rotatingTexts = [
     "WELCOME TO HDA COMPANY LIMITED",
-    "PROFESSIONAL EXPLOSIVE SOLUTIONS", 
-    "SAFETY FIRST, EXCELLENCE ALWAYS",
-    "YOUR TRUSTED BLASTING PARTNER",
-    "PRECISION • POWER • PERFORMANCE"
+    "MINING EXPLOSIVE SOLUTIONS FOR EAST AFRICA", 
+    "IMPORTATION • DISTRIBUTION • EXPORT",
+    "YOUR TRUSTED EXPLOSIVE PRODUCTS PARTNER",
+    "TRANSPARENCY • RELIABILITY • INNOVATION"
   ];
 
   return (
@@ -122,9 +122,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('coreServices')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Our Activities</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t('servicesDescription')}
+              We provide comprehensive explosive solutions to enhance mining operations across Tanzania and East Africa
             </p>
           </motion.div>
 
@@ -132,21 +132,21 @@ const Index = () => {
             {[
               {
                 icon: Zap,
-                title: t('explosiveProducts'),
-                description: t('explosiveProductsDesc'),
-                features: [t('anfoExplosives'), t('detonators'), t('safetyEquipment'), t('internationalSupply')]
+                title: "Best Blasting Services",
+                description: "Professional blasting services for mining operations with cutting-edge technology and safety protocols",
+                features: ["Controlled Blasting", "Rock Excavation", "Quarry Operations", "Site Preparation"]
               },
               {
                 icon: Target,
-                title: t('blastingServices'),
-                description: t('blastingServicesDesc'),
-                features: [t('controlledDemolition'), t('rockExcavation'), t('quarryOperations'), t('sitePreparation')]
+                title: "Explosive Distribution",
+                description: "Comprehensive distribution of explosives to customers all over Tanzania with reliable supply chain",
+                features: ["Nationwide Distribution", "Timely Delivery", "Quality Assurance", "Customer Support"]
               },
               {
                 icon: BookOpen,
-                title: t('blastingConsultancy'),
-                description: t('blastingConsultancyDesc'),
-                features: [t('blastDesign'), t('safetyAssessments'), t('trainingPrograms'), t('technicalSupport')]
+                title: "Import & Export Services",
+                description: "Professional importing and exporting of explosive products with full regulatory compliance",
+                features: ["International Trade", "Customs Clearance", "Documentation", "Quality Control"]
               }
             ].map((service, index) => (
               <motion.div
@@ -189,52 +189,52 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('productsTitle')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Our Products</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t('productsDescription')}
+              High-quality explosive products designed for all weather conditions and suitable for all types of miners
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                name: "ANFO Explosives", 
-                description: "Ammonium Nitrate Fuel Oil for efficient blasting",
+                name: "TRUNKLINE", 
+                description: "Shock tube with millisecond delay detonator. Water resistant with delay timing: 17ms, 25ms, 42ms, and 67ms",
                 image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Emulsion Explosives", 
-                description: "Water-resistant explosives for wet conditions",
+                name: "VIPER BOOSTERS", 
+                description: "High-strength explosive charge for initiation sequence. Weights: 150g to 400g with velocity of detonation: min 8,000 m/s",
                 image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Detonators", 
-                description: "Precision timing devices for controlled blasting",
+                name: "LP ASSEMBLIES", 
+                description: "Long Period Delay Detonators with shock tube. 20 different delay periods with no overlap, J-hook connector",
                 image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Boosters", 
-                description: "High-energy initiating charges",
+                name: "PGAN", 
+                description: "Porous Granular Ammonium Nitrate for ANFO applications. Ammonium nitrate content > 99.5%",
                 image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Safety Equipment", 
-                description: "Personal protective equipment for blasting operations",
+                name: "PRIMACORD", 
+                description: "Detonating Cords - Flexible linear explosives with PETN core. VOD: 4,500 m/s – 6,000 m/s",
                 image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Blasting Accessories", 
-                description: "Complete range of blasting support equipment",
+                name: "INNOPAK", 
+                description: "Water in Oil Emulsion Cartridge Explosives for hard rock mining. VOD: 3,500 – 5,000 m/s",
                 image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Shaped Charges", 
-                description: "Specialized charges for precise cutting operations",
+                name: "EXPLOGEL V6", 
+                description: "Watergel cartridge for general mining in hard rock. Size range: 25x270mm to 65x550mm",
                 image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
               },
               { 
-                name: "Mining Tools", 
-                description: "Professional-grade mining and drilling equipment",
+                name: "SUPERPOWER90", 
+                description: "Mid-range energy product for mining and quarrying. VOD: 3,000 – 4,800 m/s",
                 image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
               }
             ].map((product, index) => (
@@ -296,20 +296,20 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">{t('aboutTitle')}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">About HDA Company Limited</h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                {t('aboutDescription')}
+                HDA Company Limited is a Tanzanian limited company (Certificate Incorporation Number 143611604) headquartered in Mbeya, Tanzania. We specialize in the importation, distribution, and export of mining explosive products throughout Tanzania and East Africa.
               </p>
               <p className="text-lg text-gray-400 mb-8">
-                {t('aboutDetails')}
+                Our mission is to enhance the availability of the best explosive products suitable for all weather conditions, providing assorted types of mining explosives for all types of miners, from small-scale to large-scale operations in East Africa.
               </p>
               <div className="space-y-4">
                 {[
-                  "Certified explosive handling and supply specialists",
-                  "International market reach beyond Tanzania",
-                  "Comprehensive blasting consultancy services",
-                  "Advanced safety management and training programs",
-                  "Full range of mining explosive accessories"
+                  "Transparency & Honesty in all our operations",
+                  "Reliability in product delivery and quality",
+                  "Affordability without compromising on quality",
+                  "Innovation in explosive solutions",
+                  "Accountability to our customers and environment"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group">
                     <div className="w-2 h-2 bg-yellow-300 rounded-full mr-4 transition-colors duration-300"></div>
@@ -327,23 +327,23 @@ const Index = () => {
             >
               <div className="bg-gradient-to-br from-yellow-400 to-red-500 rounded-lg p-8 transition-all duration-500 group">
                 <div className="text-slate-900 transition-colors duration-500">
-                  <h3 className="text-2xl font-bold mb-6">{t('whyChoose')}</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <h3 className="text-2xl font-bold mb-6">Why Choose HDA Company Limited</h3>
+                    <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center text-center">
                       <Shield className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">{t('uncompromisingSafety')}</span>
+                      <span className="text-sm font-medium">Water Resistant Products</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Award className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">{t('provenExcellence')}</span>
+                      <span className="text-sm font-medium">All Weather Suitable</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Users className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">{t('expertTeam')}</span>
+                      <span className="text-sm font-medium">East Africa Coverage</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Wrench className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">{t('fullService')}</span>
+                      <span className="text-sm font-medium">Complete Solutions</span>
                     </div>
                   </div>
                 </div>
@@ -362,9 +362,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('getInTouch')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Get In Touch</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t('contactDescription')}
+              Contact HDA Company Limited for all your mining explosive needs. We're here to provide the best solutions for your operations.
             </p>
           </motion.div>
 
