@@ -365,18 +365,17 @@ const Index = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Leadership</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Meet the visionary leader driving HDA Company Limited's success in East Africa's mining explosive industry
+              Meet the visionary leaders driving HDA Company Limited's success in East Africa's mining explosive industry
             </p>
           </motion.div>
 
-          <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="max-w-md"
             >
-              <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group">
+              <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group h-full">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
@@ -403,6 +402,46 @@ const Index = () => {
                         <h4 className="text-yellow-100 font-semibold mb-1">Experience</h4>
                         <p className="text-gray-300 text-sm">
                           12 years experience in Mining business, majoring in Explosives dealings, with extensive managerial experience, having led various positions in Explosive companies.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="mb-6">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
+                      <div className="w-full h-full rounded-full bg-slate-600 flex items-center justify-center">
+                        <div className="text-4xl font-bold text-yellow-300">JM</div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-yellow-100 mb-2">Jackline Masangula</h3>
+                    <p className="text-yellow-300 text-lg mb-4">Director</p>
+                  </div>
+                  
+                  <div className="space-y-4 text-left">
+                    <div className="flex items-start space-x-3">
+                      <GraduationCap className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-yellow-100 font-semibold mb-1">Education</h4>
+                        <p className="text-gray-300 text-sm">Bachelor of Arts in Adult Education</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <Briefcase className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-yellow-100 font-semibold mb-1">Experience</h4>
+                        <p className="text-gray-300 text-sm">
+                          9 years of experience in financial analysis and management.
                         </p>
                       </div>
                     </div>
