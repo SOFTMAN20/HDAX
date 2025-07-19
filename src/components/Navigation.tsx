@@ -72,10 +72,12 @@ const Navigation = () => {
 
           {/* Desktop Phone & Language */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-white bg-blue-600 px-4 py-2 rounded-lg">
-              <Phone className="h-4 w-4" />
-              <span className="text-sm font-medium">Have any questions?</span>
-              <span className="font-bold">Call: +255753392262</span>
+            <div className="flex items-center space-x-3 text-white bg-blue-600 px-4 py-2 rounded-lg">
+              <Phone className="h-5 w-5 phone-calling" />
+              <div className="flex flex-col">
+                <span className="text-xs font-medium">Have any questions?</span>
+                <span className="font-bold text-sm">Call: +255753392262</span>
+              </div>
             </div>
             <LanguageSwitcher />
           </div>
