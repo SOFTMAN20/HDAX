@@ -22,6 +22,13 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "255753392262";
+    const message = "Hello, I would like to inquire about your mining explosive solutions.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const navItems = [
     { path: "/", label: t('home') },
     { path: "/about", label: "About Us" },
@@ -72,13 +79,16 @@ const Navigation = () => {
 
           {/* Desktop Phone & Language */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-3 text-white bg-blue-600 px-4 py-2 rounded-lg">
+            <button 
+              onClick={handleWhatsAppClick}
+              className="flex items-center space-x-3 text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 cursor-pointer"
+            >
               <Phone className="h-5 w-5 phone-calling" />
               <div className="flex flex-col">
                 <span className="text-xs font-medium">Have any questions?</span>
                 <span className="font-bold text-sm">Call: +255753392262</span>
               </div>
-            </div>
+            </button>
             <LanguageSwitcher />
           </div>
 
@@ -108,10 +118,13 @@ const Navigation = () => {
           <div className="px-6 py-4 space-y-4">
             <div className="border-b border-slate-600 pb-4 flex justify-between items-center">
               <LanguageSwitcher />
-              <div className="flex items-center space-x-2 text-yellow-400 text-sm">
-                <Phone className="h-4 w-4" />
+              <button 
+                onClick={handleWhatsAppClick}
+                className="flex items-center space-x-2 text-yellow-400 text-sm hover:text-yellow-300 transition-colors cursor-pointer"
+              >
+                <Phone className="h-4 w-4 phone-calling" />
                 <span>+255753392262</span>
-              </div>
+              </button>
             </div>
             {navItems.map((item) => (
               <Link

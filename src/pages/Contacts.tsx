@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +9,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contacts = () => {
   const { t } = useLanguage();
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "255753392262";
+    const message = "Hello, I would like to inquire about your mining explosive solutions.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
@@ -52,13 +60,28 @@ const Contacts = () => {
               </h2>
               
               <div className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="bg-yellow-500 p-3 rounded-lg flex-shrink-0">
+                    <Phone className="h-6 w-6 text-slate-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">Mobile</h3>
+                    <button 
+                      onClick={handleWhatsAppClick}
+                      className="text-yellow-400 font-semibold mb-1 hover:text-yellow-300 transition-colors cursor-pointer underline"
+                    >
+                      +255753392262
+                    </button>
+                    <p className="text-gray-300 text-sm">Click to chat on WhatsApp - Available for all your mining explosive needs</p>
+                  </div>
+                </motion.div>
+
                 {[
-                  {
-                    icon: Phone,
-                    title: "Mobile",
-                    info: "+255753392262",
-                    description: "Available for all your mining explosive needs"
-                  },
                   {
                     icon: Mail,
                     title: "Email",
@@ -82,7 +105,7 @@ const Contacts = () => {
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: (index + 1) * 0.1 }}
                     className="flex items-start space-x-4"
                   >
                     <div className="bg-yellow-500 p-3 rounded-lg flex-shrink-0">
