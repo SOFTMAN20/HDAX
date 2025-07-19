@@ -23,9 +23,10 @@ const Navigation = () => {
 
   const navItems = [
     { path: "/", label: t('home') },
-    { path: "/about", label: "About Us" },
-    { path: "/services", label: "Our Services" },
-    { path: "/#contact", label: "Contact Us" }
+    { path: "/about", label: "About" },
+    { path: "/services", label: "Services" },
+    { path: "/products", label: "Products" },
+    { path: "/contacts", label: "Contacts" }
   ];
 
   return (
