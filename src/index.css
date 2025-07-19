@@ -271,19 +271,41 @@ All colors MUST be HSL.
 }
 
 .phone-calling {
-  animation: phoneRing 1.5s infinite, phonePulse 1.5s infinite;
+  animation: phoneRing 3s infinite, phonePulse 3s infinite;
   transition: all 0.3s ease;
 }
 
 /* Enhanced phone icon animation for all screens */
 .phone-icon {
-  animation: phoneRing 1.5s infinite, phonePulse 1.5s infinite;
+  animation: phoneRing 3s infinite, phonePulse 3s infinite;
   transition: all 0.3s ease;
 }
 
 .phone-icon:hover {
-  animation: phoneRing 1s infinite, phonePulse 1s infinite;
+  animation: phoneRing 2s infinite, phonePulse 2s infinite;
   filter: brightness(1.2) drop-shadow(0 0 12px rgba(59, 130, 246, 0.8));
+}
+
+/* Mobile and tablet specific phone animation */
+@media (max-width: 1024px) {
+  .phone-calling, .phone-icon {
+    animation: phoneRing 2.5s infinite, phonePulse 2.5s infinite;
+  }
+  
+  .phone-icon:hover {
+    animation: phoneRing 2s infinite, phonePulse 2s infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-calling, .phone-icon {
+    animation: phoneRing 2.5s infinite, phonePulse 2.5s infinite;
+  }
+  
+  .phone-icon:active {
+    animation: phoneRing 1.5s infinite, phonePulse 1.5s infinite;
+    filter: brightness(1.2) drop-shadow(0 0 12px rgba(59, 130, 246, 0.8));
+  }
 }
 
 /* Enhanced Navigation Hover Effects */
