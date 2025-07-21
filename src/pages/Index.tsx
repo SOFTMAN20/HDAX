@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -86,22 +84,20 @@ const Index = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Card className="bg-slate-600 border-yellow-400 h-full transition-all duration-300 shadow-lg shadow-yellow-400/20">
-                  <CardContent className="p-8">
-                    <div className="mb-6">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-lg overflow-hidden bg-white p-2">
-                        <img 
-                          src={service.image} 
-                          alt={service.title}
-                          className="w-full h-full object-cover rounded"
-                        />
-                      </div>
-                      <h3 className="text-2xl font-bold text-yellow-100 mb-3 transition-colors duration-300">{service.title}</h3>
-                      <p className="text-gray-300 mb-6">{service.description}</p>
+                <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 hover:border-4 h-full transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30">
+                  <CardContent className="p-6">
+                    <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+                      />
                     </div>
+                    <h3 className="text-xl font-bold text-yellow-100 mb-3 transition-colors duration-300">{service.title}</h3>
+                    <p className="text-gray-300 mb-6 text-sm">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="text-gray-300 flex items-center transition-colors duration-300">
+                        <li key={i} className="text-gray-300 flex items-center transition-colors duration-300 text-sm">
                           <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3 transition-colors duration-300"></div>
                           {feature}
                         </li>
@@ -618,4 +614,3 @@ const Index = () => {
 };
 
 export default Index;
-
