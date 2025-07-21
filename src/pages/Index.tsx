@@ -133,9 +133,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Our Activities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('services.title')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We provide comprehensive explosive solutions to enhance mining operations across Tanzania and East Africa
+              {t('services.subtitle')}
             </p>
           </motion.div>
 
@@ -143,21 +143,36 @@ const Index = () => {
             {[
               {
                 icon: Zap,
-                title: "Best Blasting Services",
-                description: "Professional blasting services for mining operations with cutting-edge technology and safety protocols",
-                features: ["Controlled Blasting", "Rock Excavation", "Quarry Operations", "Site Preparation"]
+                title: t('services.blastingServices.title'),
+                description: t('services.blastingServices.description'),
+                features: [
+                  t('services.blastingServices.features.demolition'),
+                  t('services.blastingServices.features.excavation'),
+                  t('services.blastingServices.features.quarry'),
+                  t('services.blastingServices.features.preparation')
+                ]
               },
               {
                 icon: Target,
-                title: "Explosive Distribution",
-                description: "Comprehensive distribution of explosives to customers all over Tanzania with reliable supply chain",
-                features: ["Nationwide Distribution", "Timely Delivery", "Quality Assurance", "Customer Support"]
+                title: t('services.explosiveProducts.title'),
+                description: t('services.explosiveProducts.description'),
+                features: [
+                  t('services.explosiveProducts.features.anfo'),
+                  t('services.explosiveProducts.features.emulsion'),
+                  t('services.explosiveProducts.features.detonators'),
+                  t('services.explosiveProducts.features.safety')
+                ]
               },
               {
                 icon: BookOpen,
-                title: "Import & Export Services",
-                description: "Professional importing and exporting of explosive products with full regulatory compliance",
-                features: ["International Trade", "Customs Clearance", "Documentation", "Quality Control"]
+                title: t('services.consultancy.title'),
+                description: t('services.consultancy.description'),
+                features: [
+                  t('services.consultancy.features.design'),
+                  t('services.consultancy.features.safety'),
+                  t('services.consultancy.features.training'),
+                  t('services.consultancy.features.support')
+                ]
               }
             ].map((service, index) => (
               <motion.div
@@ -191,7 +206,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section - Limited to 4 products */}
+      {/* Products Section */}
       <section id="products" className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <motion.div
@@ -200,9 +215,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Our Products</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('products.title')}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              High-quality explosive products designed for all weather conditions and suitable for all types of miners
+              {t('products.subtitle')}
             </p>
           </motion.div>
 
@@ -250,7 +265,6 @@ const Index = () => {
             ))}
           </div>
 
-          {/* More Products Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -262,7 +276,7 @@ const Index = () => {
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300 transform hover:scale-105"
             >
-              More Products
+              {t('common.viewAll')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
@@ -274,10 +288,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: Users, number: "50+", label: t('expertTeam') },
-              { icon: Award, number: "200+", label: t('successfulProjects') },
-              { icon: Clock, number: "15+", label: t('yearsExperience') },
-              { icon: Shield, number: "100%", label: t('safetyRecord') }
+              { icon: Users, number: "50+", label: t('stats.expertTeam') },
+              { icon: Award, number: "200+", label: t('stats.successfulProjects') },
+              { icon: Clock, number: "15+", label: t('stats.yearsExperience') },
+              { icon: Shield, number: "100%", label: t('stats.safetyRecord') }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -304,7 +318,7 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">About HDA Company Limited</h2>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">{t('about.title')}</h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
                 HDA Company Limited is a Tanzanian limited company (Certificate Incorporation Number 143611604) headquartered in Mbeya, Tanzania. We specialize in the importation, distribution, and export of mining explosive products throughout Tanzania and East Africa.
               </p>
@@ -335,23 +349,23 @@ const Index = () => {
             >
               <div className="bg-gradient-to-br from-yellow-400 to-red-500 rounded-lg p-8 transition-all duration-500 group">
                 <div className="text-slate-900 transition-colors duration-500">
-                  <h3 className="text-2xl font-bold mb-6">Why Choose HDA Company Limited</h3>
+                  <h3 className="text-2xl font-bold mb-6">{t('about.whyChoose')}</h3>
                     <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center text-center">
                       <Shield className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Water Resistant Products</span>
+                      <span className="text-sm font-medium">{t('products.features.weatherResistant.title')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Award className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">All Weather Suitable</span>
+                      <span className="text-sm font-medium">{t('products.features.safetyCertified.title')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Users className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">East Africa Coverage</span>
+                      <span className="text-sm font-medium">{t('products.features.eastAfricaCoverage.title')}</span>
                     </div>
                     <div className="flex flex-col items-center text-center">
                       <Wrench className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Complete Solutions</span>
+                      <span className="text-sm font-medium">{t('products.features.customSolutions.title')}</span>
                     </div>
                   </div>
                 </div>
@@ -370,7 +384,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Leadership</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('about.leadership')}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Meet the visionary leaders driving HDA Company Limited's success in East Africa's mining explosive industry
             </p>
@@ -473,9 +487,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('contact.getInTouch')}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Contact HDA Company Limited for all your mining explosive needs. We're here to provide the best solutions for your operations.
+              {t('contact.subtitle')}
             </p>
           </motion.div>
 
@@ -489,7 +503,7 @@ const Index = () => {
               <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
                 <MapPin className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('headOffice')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('contact.physicalAddress')}</h3>
                   <p className="text-gray-300 font-semibold">HDA Company Limited</p>
                   <p className="text-gray-300">P.O. Box 1113, Mbeya</p>
                   <p className="text-gray-300">Street: Maendeleo</p>
@@ -501,18 +515,18 @@ const Index = () => {
               <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
                 <Phone className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('phone')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('contact.mobile')}</h3>
                   <p className="text-gray-300">+255753392262</p>
-                  <p className="text-gray-400 text-sm mt-1">{t('emergencySupport')}</p>
+                  <p className="text-gray-400 text-sm mt-1">{t('contact.whatsappDescription')}</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4 bg-slate-800 p-4 rounded-lg transition-colors duration-300 group">
                 <Mail className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
-                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('email')}</h3>
+                  <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('contact.email')}</h3>
                   <p className="text-gray-300">imanimwaisunga@hda.co.tz</p>
-                  <p className="text-gray-400 text-sm mt-1">{t('emailDescription')}</p>
+                  <p className="text-gray-400 text-sm mt-1">{t('contact.emailDescription')}</p>
                 </div>
               </div>
             </motion.div>
@@ -524,45 +538,50 @@ const Index = () => {
             >
               <Card className="bg-slate-700 border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/20">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-yellow-100 mb-6">{t('requestQuote')}</h3>
+                  <h3 className="text-2xl font-bold text-yellow-100 mb-6">{t('contact.sendMessage')}</h3>
                   <form className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <Input
                         type="text"
-                        placeholder={t('yourName')}
+                        placeholder={t('contact.form.firstNamePlaceholder')}
                         className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
                       <Input
                         type="text"
-                        placeholder={t('company')}
+                        placeholder={t('contact.form.lastNamePlaceholder')}
                         className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div>
                       <Input
                         type="email"
-                        placeholder={t('emailAddress')}
+                        placeholder={t('contact.form.emailPlaceholder')}
                         className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div>
-                      <select className="w-full px-4 py-3 bg-slate-600 border border-yellow-400/50 rounded-lg text-white focus:outline-none focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20">
-                        <option value="">{t('selectService')}</option>
-                        <option value="explosives">{t('explosiveProducts')}</option>
-                        <option value="blasting">{t('blastingServices')}</option>
-                        <option value="consultancy">{t('blastingConsultancy')}</option>
-                        <option value="accessories">Mining Accessories</option>
-                      </select>
+                      <Input
+                        type="tel"
+                        placeholder={t('contact.form.phonePlaceholder')}
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="text"
+                        placeholder={t('contact.form.subjectPlaceholder')}
+                        className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 focus:ring-2 focus:ring-yellow-400/20"
+                      />
                     </div>
                     <div>
                       <Textarea
-                        placeholder={t('projectDetails')}
+                        placeholder={t('contact.form.messagePlaceholder')}
                         rows={4}
                         className="bg-slate-600 border-yellow-400/50 text-white placeholder:text-gray-400 focus:border-yellow-400 hover:border-yellow-400/70 transition-all duration-300 resize-none focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold py-3 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
-                      {t('sendInquiry')}
+                      {t('contact.form.send')}
                     </Button>
                   </form>
                 </CardContent>
@@ -588,7 +607,7 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
-                {t('footerDescription')}
+                {t('footer.description')}
               </p>
               <div className="text-gray-500 text-sm">
                 <p>HDA Company Limited</p>
@@ -600,21 +619,21 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('ourServices')}</h4>
+              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('services.title')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('explosiveProducts')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingServices')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('blastingConsultancy')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('trainingPrograms')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('services.explosiveProducts.title')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('services.blastingServices.title')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('services.consultancy.title')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('services.additional.safetyTraining.title')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('coverageArea')}</h4>
+              <h4 className="text-yellow-400 font-semibold mb-4 transition-colors duration-300">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('domesticTanzania')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('eastAfricaRegion')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('internationalMarkets')}</li>
-                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('remoteSiteOperations')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('navigation.home')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('navigation.about')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('navigation.services')}</li>
+                <li className="text-yellow-300 transition-colors duration-300 cursor-pointer">{t('navigation.products')}</li>
               </ul>
             </div>
             <div>
@@ -680,7 +699,7 @@ const Index = () => {
           </div>
           <div className="text-center pt-8 border-t border-slate-700">
             <div className="text-gray-500 text-sm">
-              © 2024 HDA Company Limited. {t('allRightsReserved')}
+              {t('footer.copyright')}
             </div>
           </div>
         </div>
