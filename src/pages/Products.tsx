@@ -143,7 +143,8 @@ const Products = () => {
                   "Size range: 25x270mm to 65x550mm (customizable)",
                   "~2-month lead time for custom sizes",
                   "VOD: 3,500 – 5,000 m/s"
-                ]
+                ],
+                image: "/lovable-uploads/7342bc97-ac69-4551-bf03-f993fe84c4d8.png"
               },
               {
                 title: "SUPERPOWER90",
@@ -152,7 +153,8 @@ const Products = () => {
                   "Size range: 25x270mm to 65x550mm (customizable)",
                   "~2-month lead time for custom sizes",
                   "VOD: 3,000 – 4,800 m/s"
-                ]
+                ],
+                image: "/lovable-uploads/7e7cde8b-4c8f-4226-b50b-e712aa1cff5e.png"
               }
             ].map((product, index) => (
               <motion.div
@@ -161,10 +163,17 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
+                className="group"
               >
-                <Card className="bg-slate-700 border-yellow-400/30 h-full transition-all duration-300 hover:border-yellow-400">
+                <Card className="bg-slate-700 border-yellow-400/30 h-full transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-400/20 overflow-hidden">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-8">
-                    <Package className="h-12 w-12 text-yellow-400 mb-6" />
                     <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
                     <p className="text-gray-300 mb-6">{product.description}</p>
                     <ul className="space-y-3">
