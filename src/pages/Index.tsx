@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { HeroCarousel } from "@/components/HeroCarousel";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -17,6 +19,37 @@ const Index = () => {
     "IMPORTATION • DISTRIBUTION • EXPORT",
     "YOUR TRUSTED EXPLOSIVE PRODUCTS PARTNER",
     "TRANSPARENCY • RELIABILITY • INNOVATION"
+  ];
+
+  const heroSlides = [
+    {
+      id: 1,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
+      title: "Mining Excellence",
+      subtitle: "Professional Solutions",
+      description: "Leading mining explosive solutions provider"
+    },
+    {
+      id: 2,
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070",
+      title: "Safety First",
+      subtitle: "Reliable Operations",
+      description: "Ensuring safe and efficient mining operations"
+    },
+    {
+      id: 3,
+      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070",
+      title: "Innovation Drive",
+      subtitle: "Modern Technology",
+      description: "Advanced explosive solutions for modern mining"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1504567961542-e24d9439a724?q=80&w=2070",
+      title: "East Africa Coverage",
+      subtitle: "Regional Expertise",
+      description: "Comprehensive mining solutions across East Africa"
+    }
   ];
 
   const scrollToContact = () => {
@@ -31,8 +64,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
+        <HeroCarousel slides={heroSlides} autoPlay={true} interval={6000} />
         
         {/* Typewriter Text Display */}
         <div className="typewriter-text-container">
