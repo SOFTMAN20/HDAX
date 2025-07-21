@@ -48,7 +48,7 @@ const Products = () => {
                   "Water resistant",
                   "Delay timing: 17ms, 25ms, 42ms, and 67ms"
                 ],
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400"
+                image: "/lovable-uploads/25cb165f-04e5-4943-818d-dac87349b054.png"
               },
               {
                 title: "BOOSTERS (VIPER BOOSTERS)",
