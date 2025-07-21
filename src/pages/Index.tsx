@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -54,8 +53,8 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight mt-20 sm:mt-24 md:mt-32"
           >
-            {t('heroTitle')}
-            <span className="text-yellow-400 block">{t('heroSubtitle')}</span>
+            {t('hero.title')}
+            <span className="text-yellow-400 block">{t('hero.subtitle')}</span>
           </motion.h1>
           
           <motion.p
@@ -64,8 +63,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
           >
-            {t('heroDescription')}
-            <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{t('heroTagline')}</span>
+            {t('hero.description')}
+            <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{t('hero.tagline')}</span>
           </motion.p>
           
           <motion.div
@@ -79,7 +78,7 @@ const Index = () => {
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px]"
             >
-              {t('ourServices')}
+              {t('hero.ourServices')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -88,7 +87,7 @@ const Index = () => {
               variant="outline" 
               className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px] border-2"
             >
-              {t('getConsultation')}
+              {t('hero.getConsultation')}
             </Button>
           </motion.div>
         </div>
