@@ -1,4 +1,5 @@
 
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,7 +45,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Zap,
+                image: "/lovable-uploads/bee38678-3db8-41b4-a4a4-e17aa1e9bb95.png",
                 title: t('services.blastingServices.title'),
                 description: t('services.blastingServices.description'),
                 features: [
@@ -55,7 +56,7 @@ const Index = () => {
                 ]
               },
               {
-                icon: Target,
+                image: "/lovable-uploads/9a183e14-b805-43a1-97b5-1b4c6c5041ce.png",
                 title: t('services.explosiveProducts.title'),
                 description: t('services.explosiveProducts.description'),
                 features: [
@@ -66,7 +67,7 @@ const Index = () => {
                 ]
               },
               {
-                icon: BookOpen,
+                image: "/lovable-uploads/2255c8c6-4d6d-487b-8173-5287f24cd5a5.png",
                 title: t('services.consultancy.title'),
                 description: t('services.consultancy.description'),
                 features: [
@@ -88,7 +89,13 @@ const Index = () => {
                 <Card className="bg-slate-600 border-yellow-400 h-full transition-all duration-300 shadow-lg shadow-yellow-400/20">
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <service.icon className="h-12 w-12 text-yellow-300 mb-4 transition-colors duration-300" />
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-lg overflow-hidden bg-white p-2">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover rounded"
+                        />
+                      </div>
                       <h3 className="text-2xl font-bold text-yellow-100 mb-3 transition-colors duration-300">{service.title}</h3>
                       <p className="text-gray-300 mb-6">{service.description}</p>
                     </div>
@@ -611,3 +618,4 @@ const Index = () => {
 };
 
 export default Index;
+
