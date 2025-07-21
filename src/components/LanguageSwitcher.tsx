@@ -1,10 +1,15 @@
 
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage();
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'sw' : 'en';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <div className="flex items-center space-x-1">
@@ -12,10 +17,10 @@ const LanguageSwitcher = () => {
       <Button
         variant="ghost"
         size="sm"
-        onClick={() => setLanguage(language === 'en' ? 'sw' : 'en')}
+        onClick={toggleLanguage}
         className="text-white hover:text-yellow-400 hover:bg-slate-800 px-3 py-1 text-sm min-w-[50px]"
       >
-        {language === 'en' ? 'KS' : 'EN'}
+        {i18n.language === 'en' ? 'KS' : 'EN'}
       </Button>
     </div>
   );

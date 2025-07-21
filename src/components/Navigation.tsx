@@ -2,13 +2,13 @@
 import { motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -30,11 +30,11 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { path: "/", label: t('home') },
-    { path: "/about", label: "About Us" },
-    { path: "/services", label: "Our Services" },
-    { path: "/products", label: "Products" },
-    { path: "/contacts", label: "Contact Us" }
+    { path: "/", label: t('navigation.home') },
+    { path: "/about", label: t('navigation.about') },
+    { path: "/services", label: t('navigation.services') },
+    { path: "/products", label: t('navigation.products') },
+    { path: "/contacts", label: t('navigation.contact') }
   ];
 
   return (

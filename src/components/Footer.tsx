@@ -1,7 +1,10 @@
 
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const handleWhatsAppClick = () => {
     const phoneNumber = "255753392262";
     const message = "Hello, I would like to inquire about your mining explosive solutions.";
@@ -17,7 +20,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-yellow-400 mb-4">HDA Company Limited</h3>
             <p className="text-gray-300 mb-4">
-              Your trusted partner for mining explosive solutions in Tanzania.
+              {t('footer.description')}
             </p>
             <p className="text-gray-400 text-sm">
               Certificate Incorporation Number: 143611604
@@ -26,7 +29,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold text-yellow-400 mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold text-yellow-400 mb-4">{t('footer.contactUs')}</h3>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-3 text-yellow-400" />
@@ -54,20 +57,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold text-yellow-400 mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold text-yellow-400 mb-4">{t('footer.quickLinks')}</h3>
             <div className="space-y-2">
-              <a href="/" className="block text-gray-300 hover:text-yellow-400 transition-colors">Home</a>
-              <a href="/about" className="block text-gray-300 hover:text-yellow-400 transition-colors">About</a>
-              <a href="/services" className="block text-gray-300 hover:text-yellow-400 transition-colors">Services</a>
-              <a href="/products" className="block text-gray-300 hover:text-yellow-400 transition-colors">Products</a>
-              <a href="/contacts" className="block text-gray-300 hover:text-yellow-400 transition-colors">Contact</a>
+              <a href="/" className="block text-gray-300 hover:text-yellow-400 transition-colors">{t('navigation.home')}</a>
+              <a href="/about" className="block text-gray-300 hover:text-yellow-400 transition-colors">{t('navigation.about')}</a>
+              <a href="/services" className="block text-gray-300 hover:text-yellow-400 transition-colors">{t('navigation.services')}</a>
+              <a href="/products" className="block text-gray-300 hover:text-yellow-400 transition-colors">{t('navigation.products')}</a>
+              <a href="/contacts" className="block text-gray-300 hover:text-yellow-400 transition-colors">{t('navigation.contact')}</a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 HDA Company Limited. All rights reserved. Owned by Tanzanians in the United Republic of Tanzania.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>
