@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -127,22 +128,22 @@ const Index = () => {
               { 
                 name: "TRUNKLINE", 
                 description: "Shock tube with millisecond delay detonator. Water resistant with delay timing: 17ms, 25ms, 42ms, and 67ms",
-                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+                image: "/lovable-uploads/25cb165f-04e5-4943-818d-dac87349b054.png"
               },
               { 
                 name: "VIPER BOOSTERS", 
                 description: "High-strength explosive charge for initiation sequence. Weights: 150g to 400g with velocity of detonation: min 8,000 m/s",
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                image: "/lovable-uploads/e58b8e3d-8149-428f-a254-b3ae77a6b234.png"
               },
               { 
                 name: "LP ASSEMBLIES", 
                 description: "Long Period Delay Detonators with shock tube. 20 different delay periods with no overlap, J-hook connector",
-                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
+                image: "/lovable-uploads/129d6ecb-358d-4e47-a9d9-6c481f29b383.png"
               },
               { 
                 name: "PGAN", 
                 description: "Porous Granular Ammonium Nitrate for ANFO applications. Ammonium nitrate content > 99.5%",
-                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+                image: "/lovable-uploads/b6b46eda-5846-4e56-8c41-dc573283f89d.png"
               }
             ].map((product, index) => (
               <motion.div
