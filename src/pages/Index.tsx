@@ -24,31 +24,31 @@ const Index = () => {
   const heroSlides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
-      title: "Mining Excellence",
-      subtitle: "Professional Solutions",
-      description: "Leading mining explosive solutions provider"
+      image: "https://images.unsplash.com/photo-1504567961542-e24d9439a724?q=80&w=2070",
+      title: "HDA Company Limited",
+      subtitle: "Mining Explosive Solutions",
+      description: "Leading provider of mining explosive solutions in East Africa"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070",
-      title: "Safety First",
-      subtitle: "Reliable Operations",
-      description: "Ensuring safe and efficient mining operations"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
+      title: "Mining Excellence",
+      subtitle: "Professional Solutions",
+      description: "Advanced explosive solutions for modern mining operations"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070",
-      title: "Innovation Drive",
-      subtitle: "Modern Technology",
-      description: "Advanced explosive solutions for modern mining"
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070",
+      title: "Safety First",
+      subtitle: "Reliable Operations",
+      description: "Ensuring safe and efficient mining operations across the region"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1504567961542-e24d9439a724?q=80&w=2070",
-      title: "East Africa Coverage",
-      subtitle: "Regional Expertise",
-      description: "Comprehensive mining solutions across East Africa"
+      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070",
+      title: "Innovation Drive",
+      subtitle: "Modern Technology",
+      description: "Cutting-edge explosive technology for superior results"
     }
   ];
 
