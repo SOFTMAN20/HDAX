@@ -38,7 +38,7 @@ const Products = () => {
       {/* Main Products */}
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
                 title: "TRUNKLINE",
@@ -134,7 +134,7 @@ const Products = () => {
           </div>
 
           {/* Additional Products */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "EXPLOGEL V6",
