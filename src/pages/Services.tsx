@@ -1,11 +1,12 @@
+
 import { motion } from "framer-motion";
 import { Zap, Target, BookOpen, Wrench, Shield, Users, Phone, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
@@ -21,7 +22,7 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Our <span className="text-yellow-400">Services</span>
+            {t('services.title')} <span className="text-yellow-400"></span>
           </motion.h1>
           
           <motion.p
@@ -30,7 +31,7 @@ const Services = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Comprehensive explosive solutions and blasting services tailored to your specific needs
+            {t('services.subtitle')}
           </motion.p>
         </div>
       </section>
@@ -45,7 +46,7 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Core Services
+              {t('services.coreServices')}
             </h2>
           </motion.div>
 
@@ -53,38 +54,38 @@ const Services = () => {
             {[
               {
                 icon: Zap,
-                title: "Explosive Products Supply",
-                description: "High-quality explosive products for various applications",
+                title: t('services.explosiveProducts.title'),
+                description: t('services.explosiveProducts.description'),
                 features: [
-                  "ANFO Explosives",
-                  "Emulsion Explosives", 
-                  "Detonators & Boosters",
-                  "Safety Equipment",
-                  "International Supply Chain"
+                  t('services.explosiveProducts.features.anfo'),
+                  t('services.explosiveProducts.features.emulsion'),
+                  t('services.explosiveProducts.features.detonators'),
+                  t('services.explosiveProducts.features.safety'),
+                  t('services.explosiveProducts.features.international')
                 ]
               },
               {
                 icon: Target,
-                title: "Professional Blasting Services",
-                description: "Expert blasting operations with precision and safety",
+                title: t('services.blastingServices.title'),
+                description: t('services.blastingServices.description'),
                 features: [
-                  "Controlled Demolition",
-                  "Rock Excavation",
-                  "Quarry Operations",
-                  "Site Preparation",
-                  "Custom Blasting Solutions"
+                  t('services.blastingServices.features.demolition'),
+                  t('services.blastingServices.features.excavation'),
+                  t('services.blastingServices.features.quarry'),
+                  t('services.blastingServices.features.preparation'),
+                  t('services.blastingServices.features.custom')
                 ]
               },
               {
                 icon: BookOpen,
-                title: "Blasting Consultancy",
-                description: "Expert consultation and training services",
+                title: t('services.consultancy.title'),
+                description: t('services.consultancy.description'),
                 features: [
-                  "Blast Design & Planning",
-                  "Safety Assessments",
-                  "Training Programs",
-                  "Technical Support",
-                  "Regulatory Compliance"
+                  t('services.consultancy.features.design'),
+                  t('services.consultancy.features.safety'),
+                  t('services.consultancy.features.training'),
+                  t('services.consultancy.features.support'),
+                  t('services.consultancy.features.compliance')
                 ]
               }
             ].map((service, index) => (
@@ -127,7 +128,7 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Additional Services
+              {t('services.additionalServices')}
             </h2>
           </motion.div>
 
@@ -135,23 +136,23 @@ const Services = () => {
             {[
               {
                 icon: Wrench,
-                title: "Equipment Maintenance",
-                description: "Professional maintenance services for blasting equipment"
+                title: t('services.additional.equipment.title'),
+                description: t('services.additional.equipment.description')
               },
               {
                 icon: Shield,
-                title: "Safety Training",
-                description: "Comprehensive safety training programs for personnel"
+                title: t('services.additional.safetyTraining.title'),
+                description: t('services.additional.safetyTraining.description')
               },
               {
                 icon: Users,
-                title: "Technical Support",
-                description: "24/7 technical support and emergency response"
+                title: t('services.additional.technicalSupport.title'),
+                description: t('services.additional.technicalSupport.description')
               },
               {
                 icon: Phone,
-                title: "Emergency Services",
-                description: "Rapid response for urgent blasting requirements"
+                title: t('services.additional.emergency.title'),
+                description: t('services.additional.emergency.description')
               }
             ].map((service, index) => (
               <motion.div
@@ -185,7 +186,7 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">
-              Our Process
+              {t('services.ourProcess')}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               How we deliver exceptional results
@@ -194,10 +195,10 @@ const Services = () => {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Consultation", description: "Initial assessment and requirement analysis" },
-              { step: "02", title: "Planning", description: "Detailed project planning and design" },
-              { step: "03", title: "Execution", description: "Safe and efficient project execution" },
-              { step: "04", title: "Support", description: "Ongoing support and maintenance" }
+              { step: "01", title: t('services.process.consultation.title'), description: t('services.process.consultation.description') },
+              { step: "02", title: t('services.process.planning.title'), description: t('services.process.planning.description') },
+              { step: "03", title: t('services.process.execution.title'), description: t('services.process.execution.description') },
+              { step: "04", title: t('services.process.support.title'), description: t('services.process.support.description') }
             ].map((process, index) => (
               <motion.div
                 key={index}
@@ -227,7 +228,7 @@ const Services = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get <span className="text-yellow-400">Started?</span>
+              {t('services.readyToStart')} <span className="text-yellow-400"></span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
               Contact us today to discuss your blasting requirements and get a customized solution
@@ -236,7 +237,7 @@ const Services = () => {
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg"
             >
-              Request Consultation
+              {t('services.requestConsultation')}
             </Button>
           </motion.div>
         </div>
