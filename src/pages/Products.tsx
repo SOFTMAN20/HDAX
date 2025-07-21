@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Package, Shield, Zap, Truck, Star, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -60,7 +59,7 @@ const Products = () => {
                   "Cast density: min 1.8 g/cm³",
                   "Water resistant (sensitive even after immersion at 100 PSI)"
                 ],
-                image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400"
+                image: "/lovable-uploads/e58b8e3d-8149-428f-a254-b3ae77a6b234.png"
               },
               {
                 title: "LONG PERIOD DELAY DETONATORS (LP Assemblies)",
@@ -70,7 +69,7 @@ const Products = () => {
                   "20 different delay periods with no overlap",
                   "Connector: J-hook"
                 ],
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400"
+                image: "/lovable-uploads/129d6ecb-358d-4e47-a9d9-6c481f29b383.png"
               },
               {
                 title: "PGAN (POROUS GRANULAR AMMONIUM NITRATE)",
@@ -80,7 +79,7 @@ const Products = () => {
                   "Bulk density: 0.76 – 0.80 g/cm³",
                   "Particle size (1mm - 3mm): > 95%"
                 ],
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400"
+                image: "/lovable-uploads/b6b46eda-5846-4e56-8c41-dc573283f89d.png"
               },
               {
                 title: "DETONATING CORDS (PRIMACORD)",
@@ -89,7 +88,7 @@ const Products = () => {
                   "For mining, quarrying, construction",
                   "Velocity of Detonation (VOD): 4,500 m/s – 6,000 m/s"
                 ],
-                image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400"
+                image: "/lovable-uploads/64d6ea19-37da-40b8-b1f0-25c5f2f08d77.png"
               },
               {
                 title: "INNOPAK WATER IN OIL EMULSION CARTRIDGE EXPLOSIVES",
@@ -98,7 +97,7 @@ const Products = () => {
                   "Packed in tubes from 25mm to 65mm (custom sizes available)",
                   "VOD: 3,500 – 5,000 m/s (depends on hole and rock characteristics)"
                 ],
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400"
+                image: "/lovable-uploads/81da3b94-3d6e-4c3a-989c-90a547c0b5cb.png"
               }
             ].map((product, index) => (
               <motion.div
