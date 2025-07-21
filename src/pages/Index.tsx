@@ -19,6 +19,13 @@ const Index = () => {
     "TRANSPARENCY • RELIABILITY • INNOVATION"
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
 
@@ -67,6 +74,7 @@ const Index = () => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pb-4 sm:pb-8"
           >
             <Button 
+              onClick={() => navigate('/services')}
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px]"
             >
@@ -74,6 +82,7 @@ const Index = () => {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
+              onClick={scrollToContact}
               size="lg" 
               variant="outline" 
               className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px] border-2"
