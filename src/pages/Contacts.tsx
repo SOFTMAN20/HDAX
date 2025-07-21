@@ -22,7 +22,7 @@ const Contacts = () => {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/42cd72a5-b9bf-4a98-a4d1-8e75981c6ca3.png')] bg-cover bg-center"></div>
         
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1
