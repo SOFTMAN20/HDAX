@@ -6,18 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import HeroCarousel from "@/components/HeroCarousel";
 
 const Index = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
-  const rotatingTexts = [
-    "WELCOME TO HDA COMPANY LIMITED",
-    "MINING EXPLOSIVE SOLUTIONS FOR EAST AFRICA", 
-    "IMPORTATION • DISTRIBUTION • EXPORT",
-    "YOUR TRUSTED EXPLOSIVE PRODUCTS PARTNER",
-    "TRANSPARENCY • RELIABILITY • INNOVATION"
-  ];
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -29,100 +22,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
 
-      {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
-        
-        {/* Typewriter Text Display */}
-        <div className="typewriter-text-container">
-          {rotatingTexts.map((text, index) => (
-            <div 
-              key={index}
-              className="typewriter-text-item"
-            >
-              {text}
-            </div>
-          ))}
-        </div>
-
-        <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 flex flex-col justify-center min-h-screen">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight mt-20 sm:mt-24 md:mt-32"
-          >
-            {t('hero.title')}
-            <span className="text-yellow-400 block">{t('hero.subtitle')}</span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
-          >
-            {t('hero.description')}
-            <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{t('hero.tagline')}</span>
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pb-4 sm:pb-8"
-          >
-            <Button 
-              onClick={() => navigate('/services')}
-              size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px]"
-            >
-              {t('hero.ourServices')}
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              variant="outline" 
-              className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px] border-2"
-            >
-              {t('hero.getConsultation')}
-            </Button>
-          </motion.div>
-        </div>
-
-        {/* Enhanced Floating Animation Elements */}
-        <div className="absolute inset-0 z-15">
-          <motion.div
-            animate={{ 
-              y: [0, -20, 0],
-              rotate: [0, 360],
-              scale: [1, 1.2, 1]
-            }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-60"
-          ></motion.div>
-          <motion.div
-            animate={{ 
-              y: [0, -30, 0],
-              x: [0, 20, 0],
-              rotate: [0, -360]
-            }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-1/3 right-1/3 w-4 h-4 bg-red-400 rounded-full opacity-40"
-          ></motion.div>
-          <motion.div
-            animate={{ 
-              y: [0, 25, 0],
-              x: [0, -15, 0],
-              scale: [1, 1.5, 1]
-            }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-1/3 left-1/5 w-2 h-2 bg-yellow-300 rounded-full opacity-70"
-          ></motion.div>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel />
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-slate-800">
