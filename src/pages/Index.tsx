@@ -260,6 +260,98 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-yellow-500 to-red-500 transition-all duration-500 group">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {[
+              { icon: Users, number: "50+", label: t('expertTeam') },
+              { icon: Award, number: "200+", label: t('successfulProjects') },
+              { icon: Clock, number: "15+", label: t('yearsExperience') },
+              { icon: Shield, number: "100%", label: t('safetyRecord') }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-slate-900 transition-colors duration-500"
+              >
+                <stat.icon className="h-12 w-12 mx-auto mb-4" />
+                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="text-lg font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">About HDA Company Limited</h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                HDA Company Limited is a Tanzanian limited company (Certificate Incorporation Number 143611604) headquartered in Mbeya, Tanzania. We specialize in the importation, distribution, and export of mining explosive products throughout Tanzania and East Africa.
+              </p>
+              <p className="text-lg text-gray-400 mb-8">
+                Our mission is to enhance the availability of the best explosive products suitable for all weather conditions, providing assorted types of mining explosives for all types of miners, from small-scale to large-scale operations in East Africa.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Transparency & Honesty in all our operations",
+                  "Reliability in product delivery and quality",
+                  "Affordability without compromising on quality",
+                  "Innovation in explosive solutions",
+                  "Accountability to our customers and environment"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group">
+                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-4 transition-colors duration-300"></div>
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-yellow-400 to-red-500 rounded-lg p-8 transition-all duration-500 group">
+                <div className="text-slate-900 transition-colors duration-500">
+                  <h3 className="text-2xl font-bold mb-6">Why Choose HDA Company Limited</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col items-center text-center">
+                      <Shield className="h-8 w-8 mb-2" />
+                      <span className="text-sm font-medium">Water Resistant Products</span>
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <Award className="h-8 w-8 mb-2" />
+                      <span className="text-sm font-medium">All Weather Suitable</span>
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <Users className="h-8 w-8 mb-2" />
+                      <span className="text-sm font-medium">East Africa Coverage</span>
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <Wrench className="h-8 w-8 mb-2" />
+                      <span className="text-sm font-medium">Complete Solutions</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Section */}
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-6">
@@ -358,98 +450,6 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-500 to-red-500 transition-all duration-500 group">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {[
-              { icon: Users, number: "50+", label: t('expertTeam') },
-              { icon: Award, number: "200+", label: t('successfulProjects') },
-              { icon: Clock, number: "15+", label: t('yearsExperience') },
-              { icon: Shield, number: "100%", label: t('safetyRecord') }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-slate-900 transition-colors duration-500"
-              >
-                <stat.icon className="h-12 w-12 mx-auto mb-4" />
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">About HDA Company Limited</h2>
-              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                HDA Company Limited is a Tanzanian limited company (Certificate Incorporation Number 143611604) headquartered in Mbeya, Tanzania. We specialize in the importation, distribution, and export of mining explosive products throughout Tanzania and East Africa.
-              </p>
-              <p className="text-lg text-gray-400 mb-8">
-                Our mission is to enhance the availability of the best explosive products suitable for all weather conditions, providing assorted types of mining explosives for all types of miners, from small-scale to large-scale operations in East Africa.
-              </p>
-              <div className="space-y-4">
-                {[
-                  "Transparency & Honesty in all our operations",
-                  "Reliability in product delivery and quality",
-                  "Affordability without compromising on quality",
-                  "Innovation in explosive solutions",
-                  "Accountability to our customers and environment"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-4 transition-colors duration-300"></div>
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-yellow-400 to-red-500 rounded-lg p-8 transition-all duration-500 group">
-                <div className="text-slate-900 transition-colors duration-500">
-                  <h3 className="text-2xl font-bold mb-6">Why Choose HDA Company Limited</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col items-center text-center">
-                      <Shield className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Water Resistant Products</span>
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                      <Award className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">All Weather Suitable</span>
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                      <Users className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">East Africa Coverage</span>
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                      <Wrench className="h-8 w-8 mb-2" />
-                      <span className="text-sm font-medium">Complete Solutions</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
