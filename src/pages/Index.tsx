@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
+import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const rotatingTexts = [
     "WELCOME TO HDA COMPANY LIMITED",
@@ -180,7 +182,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Products Section - Limited to 4 products */}
       <section id="products" className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <motion.div
@@ -216,26 +218,6 @@ const Index = () => {
                 name: "PGAN", 
                 description: "Porous Granular Ammonium Nitrate for ANFO applications. Ammonium nitrate content > 99.5%",
                 image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
-              },
-              { 
-                name: "PRIMACORD", 
-                description: "Detonating Cords - Flexible linear explosives with PETN core. VOD: 4,500 m/s – 6,000 m/s",
-                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
-              },
-              { 
-                name: "INNOPAK", 
-                description: "Water in Oil Emulsion Cartridge Explosives for hard rock mining. VOD: 3,500 – 5,000 m/s",
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
-              },
-              { 
-                name: "EXPLOGEL V6", 
-                description: "Watergel cartridge for general mining in hard rock. Size range: 25x270mm to 65x550mm",
-                image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
-              },
-              { 
-                name: "SUPERPOWER90", 
-                description: "Mid-range energy product for mining and quarrying. VOD: 3,000 – 4,800 m/s",
-                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
               }
             ].map((product, index) => (
               <motion.div
@@ -258,6 +240,23 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* More Products Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mt-12"
+          >
+            <Button 
+              onClick={() => navigate('/products')}
+              size="lg" 
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300 transform hover:scale-105"
+            >
+              More Products
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </motion.div>
         </div>
       </section>
 
@@ -348,109 +347,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founders Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">Leadership</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Meet the visionary leaders driving HDA Company Limited's success in East Africa's mining explosive industry
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <img 
-                        src="/lovable-uploads/fd92fd20-6fda-4b9d-8f1d-8d7d46442142.png" 
-                        alt="Imani Mwaisunga - Executive Director"
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold text-yellow-100 mb-2">Imani Mwaisunga</h3>
-                    <p className="text-yellow-300 text-lg mb-4">Executive Director</p>
-                  </div>
-                  
-                  <div className="space-y-4 text-left">
-                    <div className="flex items-start space-x-3">
-                      <GraduationCap className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-yellow-100 font-semibold mb-1">Education</h4>
-                        <p className="text-gray-300 text-sm">BSc. Mining Engineering</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <Briefcase className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-yellow-100 font-semibold mb-1">Experience</h4>
-                        <p className="text-gray-300 text-sm">
-                          12 years experience in Mining business, majoring in Explosives dealings, with extensive managerial experience, having led various positions in Explosive companies.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <img 
-                        src="/lovable-uploads/9a793414-de7f-4886-9372-f0a2671146f3.png" 
-                        alt="Jackline Masangula - Director"
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold text-yellow-100 mb-2">Jackline Masangula</h3>
-                    <p className="text-yellow-300 text-lg mb-4">Director</p>
-                  </div>
-                  
-                  <div className="space-y-4 text-left">
-                    <div className="flex items-start space-x-3">
-                      <GraduationCap className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-yellow-100 font-semibold mb-1">Education</h4>
-                        <p className="text-gray-300 text-sm">Bachelor of Arts in Adult Education</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <Briefcase className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="text-yellow-100 font-semibold mb-1">Experience</h4>
-                        <p className="text-gray-300 text-sm">
-                          9 years of experience in financial analysis and management.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </motion.div>
           </div>
         </div>
