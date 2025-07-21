@@ -13,7 +13,7 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/7df938fc-16f9-4568-a9b5-a2bf9b63cfe5.png')] bg-cover bg-center"></div>
         
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1
