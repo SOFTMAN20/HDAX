@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import { Shield, Users, Award, Clock, Target, Eye, Heart, GraduationCap, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">

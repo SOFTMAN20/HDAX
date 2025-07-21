@@ -5,10 +5,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Contacts = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "255753392262";

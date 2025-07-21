@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Package, Shield, Zap, Truck, Star, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Products = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">

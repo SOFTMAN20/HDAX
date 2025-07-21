@@ -1,14 +1,15 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Mountain, Phone, Mail, MapPin, Users, Award, Clock, Target, Wrench, BookOpen, Facebook, Twitter, Linkedin, Instagram, Youtube, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const rotatingTexts = [
