@@ -23,11 +23,12 @@ const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
-      background: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
+      background: "images/contactsengineer.jpg",
       title: t('hero.title'),
       subtitle: t('hero.subtitle'),
       description: t('hero.description'),
       tagline: t('hero.tagline'),
+      
       primaryButton: {
         text: t('hero.ourServices'),
         action: () => navigate('/services')
@@ -39,7 +40,7 @@ const HeroCarousel = () => {
     },
     {
       id: 2,
-      background: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070",
+      background: "images/blasting).jpeg",
       title: "Professional Mining Services",
       subtitle: "Expert Solutions",
       description: "Comprehensive blasting services, explosive products, and technical consultancy for all your mining operations across East Africa.",
@@ -56,7 +57,7 @@ const HeroCarousel = () => {
     },
     {
       id: 3,
-      background: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070",
+      background: "images/products.png",
       title: "Premium Explosive Products",
       subtitle: "Quality Guaranteed",
       description: "Weather-resistant explosive products including TRUNKLINE, VIPER BOOSTERS, LP ASSEMBLIES, and PGAN for all mining conditions.",
@@ -109,6 +110,17 @@ const HeroCarousel = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id} className="h-full">
               <div className="relative h-full flex items-center justify-center">
+                {/* Animated Explosive Banner for First Slide */}
+                {slide.id === 1 && (
+                  <motion.img
+                    src="/images/explosives.jpg"
+                    alt="Explosives Banner"
+                    initial={{ opacity: 0, x: 80, y: -80, scale: 0.8 }}
+                    animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                    transition={{ duration: 1.2, type: "spring", bounce: 0.4 }}
+                    className="hidden sm:block absolute top-6 right-6 w-32 h-32 md:w-44 md:h-44 z-30 shadow-xl rounded-lg pointer-events-none"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85 z-10"></div>
                 <div 
                   className="absolute inset-0 bg-cover bg-center"

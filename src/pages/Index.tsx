@@ -43,7 +43,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                image: "/lovable-uploads/bee38678-3db8-41b4-a4a4-e17aa1e9bb95.png",
+                image: "/images/blasting).jpeg",
                 title: t('services.blastingServices.title'),
                 description: t('services.blastingServices.description'),
                 features: [

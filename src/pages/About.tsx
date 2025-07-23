@@ -69,7 +69,7 @@ const About = () => {
               className="relative"
             >
               <img 
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
+                src="images/exp.jpg" 
                 alt="HDA Company Operations" 
                 className="rounded-lg shadow-2xl"
               />

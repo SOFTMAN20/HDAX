@@ -49,7 +49,7 @@ const Navigation = () => {
           >
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/de034e97-3212-4844-9be3-b0bf04d07d5e.png" 
+                src="images/logo2.jpg" 
                 alt="HDA Company Limited Logo" 
                 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
               />
