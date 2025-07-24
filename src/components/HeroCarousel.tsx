@@ -92,7 +92,7 @@ const HeroCarousel = () => {
   ];
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -106,10 +106,10 @@ const HeroCarousel = () => {
         ]}
         className="w-full h-full"
       >
-        <CarouselContent className="h-full">
+        <CarouselContent className="min-h-screen">
           {slides.map((slide, index) => (
-            <CarouselItem key={slide.id} className="h-full">
-              <div className="relative h-full flex items-center justify-center">
+            <CarouselItem key={slide.id} className="min-h-screen">
+              <div className="relative min-h-screen flex items-center justify-center">
                 {/* Animated Explosive Banner for First Slide */}
                 {slide.id === 1 && (
                   <motion.img
@@ -127,7 +127,7 @@ const HeroCarousel = () => {
                   style={{ backgroundImage: `url('${slide.background}')` }}
                 ></div>
                 
-                <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center min-h-screen">
+                <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center min-h-screen py-20 sm:py-0">
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ const HeroCarousel = () => {
                     className="mb-6"
                   >
                     {slide.icon && (
-                      <slide.icon className="h-16 w-16 text-yellow-400 mx-auto mb-4" />
+                      <slide.icon className="h-12 w-12 sm:h-16 sm:w-16 text-yellow-400 mx-auto mb-4" />
                     )}
                   </motion.div>
                   
@@ -143,7 +143,7 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
                   >
                     {slide.title}
                     <span className="text-yellow-400 block">{slide.subtitle}</span>
@@ -153,22 +153,22 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
+                    className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed"
                   >
                     {slide.description}
-                    <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{slide.tagline}</span>
+                    <span className="block text-sm sm:text-base md:text-lg mt-2">{slide.tagline}</span>
                   </motion.p>
                   
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pb-4 sm:pb-8"
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
                   >
                     <Button 
                       onClick={slide.primaryButton.action}
                       size="lg" 
-                      className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px]"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-6 sm:px-8 py-4 text-base sm:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[48px] sm:min-h-[52px]"
                     >
                       {slide.primaryButton.text}
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -177,7 +177,7 @@ const HeroCarousel = () => {
                       onClick={slide.secondaryButton.action}
                       size="lg" 
                       variant="outline" 
-                      className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px] border-2"
+                      className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-6 sm:px-8 py-4 text-base sm:text-lg transition-all duration-300 w-full sm:w-auto min-h-[48px] sm:min-h-[52px] border-2"
                     >
                       {slide.secondaryButton.text}
                     </Button>

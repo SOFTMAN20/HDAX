@@ -228,12 +228,39 @@ All colors MUST be HSL.
 /* Ensure hero content fits on mobile */
 @media (max-width: 640px) {
   .hero-content {
-    padding-top: 80px;
-    padding-bottom: 20px;
-    min-height: calc(100vh - 100px);
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  /* Ensure carousel takes full height on mobile */
+  #home {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  
+  #home .embla__container,
+  #home .embla__slide {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #home {
+    min-height: 100vh;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) {
+  #home {
+    height: 100vh;
+    min-height: 100vh;
   }
 }
 
